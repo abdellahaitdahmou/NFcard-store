@@ -78,8 +78,8 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
                 <img src="/logo.png" alt="NFcard Logo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <span className="font-black text-slate-900 text-lg tracking-tight block leading-tight">
-                  NF<span className="text-orange-500">card</span><span className="text-slate-400 text-xs font-bold">.ma</span>
+                <span className="font-black text-orange-500 text-lg tracking-tight flex items-center leading-tight">
+                  card<span className="text-[10px] text-orange-800 font-extrabold ml-1 uppercase px-1.5 py-0.2 rounded-full bg-orange-50 border border-orange-200">.MA</span>
                 </span>
                 <span className="text-[10px] text-orange-600 font-bold uppercase tracking-wider">
                   Admin Dashboard

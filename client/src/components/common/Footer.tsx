@@ -64,9 +64,9 @@ export const Footer: React.FC = () => {
               >
                 <img src="/logo.png" alt="NFcard Logo" className="w-full h-full object-contain" />
               </motion.div>
-              <span className="font-black text-slate-900 text-3xl sm:text-4xl tracking-tight flex items-baseline">
-                NF<span className="text-orange-500">card</span>
-                <span className="text-xs text-orange-700 font-extrabold ml-1.5 uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-orange-50 border border-orange-200">.ma</span>
+              <span className="font-black text-orange-500 text-3xl sm:text-4xl tracking-tight flex items-center">
+                card
+                <span className="text-xs text-orange-800 font-extrabold ml-2 uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-orange-50 border border-orange-200">.MA</span>
               </span>
             </Link>
 
