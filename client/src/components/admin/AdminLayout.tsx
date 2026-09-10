@@ -73,16 +73,16 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
         <div>
           {/* Logo Header */}
           <div className="p-5 border-b border-slate-100 flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center p-1 shadow-md shadow-amber-500/20">
-                <img src="/logo-icon.png" alt="NFcard Logo" className="w-full h-full object-contain" />
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="w-12 h-12 rounded-2xl bg-white border border-orange-200 flex items-center justify-center p-1.5 shadow-md shadow-orange-500/10 group-hover:scale-105 transition-transform">
+                <img src="/logo.png" alt="NFcard Logo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <span className="font-extrabold text-slate-900 text-base tracking-tight block leading-tight">
-                  NFCARD<span className="text-amber-600">.</span>MA
+                <span className="font-black text-slate-900 text-lg tracking-tight block leading-tight">
+                  NF<span className="text-orange-500">card</span><span className="text-slate-400 text-xs font-bold">.ma</span>
                 </span>
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                  Admin Panel
+                <span className="text-[10px] text-orange-600 font-bold uppercase tracking-wider">
+                  Admin Dashboard
                 </span>
               </div>
             </Link>

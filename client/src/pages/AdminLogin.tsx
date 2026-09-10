@@ -35,11 +35,11 @@ export const AdminLogin: React.FC = () => {
       <div className="max-w-md w-full bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 space-y-6 shadow-xl shadow-slate-900/5">
         
         {/* Brand Header */}
-        <div className="text-center space-y-2">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex items-center justify-center mx-auto shadow-lg shadow-amber-500/20 p-2">
-            <img src="/logo-icon.png" alt="NFcard Logo" className="w-full h-full object-contain" />
+        <div className="text-center space-y-3">
+          <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-3xl bg-white border border-orange-200 text-white flex items-center justify-center mx-auto shadow-xl shadow-orange-500/15 p-3">
+            <img src="/logo.png" alt="NFcard Logo" className="w-full h-full object-contain" />
           </div>
-          <h1 className="text-2xl font-black text-slate-900 tracking-tight">Administration NFcard</h1>
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Administration NFcard</h1>
           <p className="text-xs text-slate-500">
             Gestion des commandes, profils digitaux et inventaire NFC au Maroc.
           </p>

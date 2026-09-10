@@ -57,16 +57,16 @@ export const Footer: React.FC = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.15 }}
           >
-            <Link to="/" className="inline-flex items-center gap-2.5 group">
+            <Link to="/" className="inline-flex items-center gap-3.5 group">
               <motion.div
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-md p-1.5 shadow-orange-500/20"
-                whileHover={{ scale: 1.1, rotate: -5 }}
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-orange-200 flex items-center justify-center shadow-lg p-2 shadow-orange-500/15"
+                whileHover={{ scale: 1.08, rotate: -3 }}
               >
-                <img src="/logo-icon.png" alt="NFcard Logo" className="w-full h-full object-contain" />
+                <img src="/logo.png" alt="NFcard Logo" className="w-full h-full object-contain" />
               </motion.div>
-              <span className="font-extrabold text-slate-900 text-2xl tracking-tight flex items-center">
+              <span className="font-black text-slate-900 text-3xl sm:text-4xl tracking-tight flex items-baseline">
                 NF<span className="text-orange-500">card</span>
-                <span className="text-[10px] text-orange-700 font-bold ml-1.5 uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange-50 border border-orange-200">.ma</span>
+                <span className="text-xs text-orange-700 font-extrabold ml-1.5 uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-orange-50 border border-orange-200">.ma</span>
               </span>
             </Link>
 
