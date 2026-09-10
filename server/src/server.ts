@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
+import fs from "fs";
 import dotenv from "dotenv";
 
 import authRouter from "./routes/auth";
@@ -56,7 +57,7 @@ app.get("/api/health", (req, res) => {
 // Card direct tap redirection helper (for physical NFC tags pointing directly to /card/xyz)
 app.get("/card/:slug", (req, res) => {
   const card = store.getCardBySlug(req.params.slug);
-  const clientBaseUrl = process.env.SITE_URL || "http://localhost:5173";
+  const clientBaseUrl = process.env.SITE_URL || "";
 
   if (card && card.status === "active") {
     store.incrementCardTap(card.cardSlug);
@@ -67,15 +68,37 @@ app.get("/card/:slug", (req, res) => {
   }
 });
 
-// 404 handler
+// Serve frontend build in production
+const possibleClientPaths = [
+  path.join(__dirname, "../../client/dist"),
+  path.join(process.cwd(), "client/dist"),
+  path.join(process.cwd(), "public_html"),
+  path.join(process.cwd(), "public"),
+  path.join(process.cwd(), "dist")
+];
+
+let clientDistPath = possibleClientPaths.find((p) => fs.existsSync(p));
+
+if (clientDistPath) {
+  console.log(`Serving static frontend from: ${clientDistPath}`);
+  app.use(express.static(clientDistPath));
+  app.get("*", (req, res, next) => {
+    if (req.path.startsWith("/api/") || req.path.startsWith("/uploads/")) {
+      return next();
+    }
+    res.sendFile(path.join(clientDistPath!, "index.html"));
+  });
+}
+
+// 404 handler for API routes
 app.use((req, res) => {
-  res.status(404).json({ success: false, message: "Route API non trouvée." });
+  res.status(404).json({ success: false, message: "Route non trouvée." });
 });
 
 // Start server
 app.listen(PORT, () => {
   console.log(`=========================================`);
-  console.log(`🇲🇦 Tektap NFC Maroc Server running on port ${PORT}`);
+  console.log(`🇲🇦 NFcard Maroc Server running on port ${PORT}`);
   console.log(`API Health: http://localhost:${PORT}/api/health`);
   console.log(`=========================================`);
 });
