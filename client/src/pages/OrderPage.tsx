@@ -216,13 +216,13 @@ export const OrderPage: React.FC = () => {
     return (
       <div className="py-20 bg-slate-50/70 min-h-[80vh] flex items-center justify-center">
         <div className="max-w-xl mx-auto px-4 w-full">
-          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-emerald-200 text-center space-y-6 shadow-xl shadow-emerald-500/10">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center animate-bounce">
+          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-orange-200 text-center space-y-6 shadow-xl shadow-orange-500/10">
+            <div className="w-16 h-16 rounded-full bg-orange-100 text-brand-500 mx-auto flex items-center justify-center animate-bounce">
               <CheckCircle2 className="w-8 h-8" />
             </div>
 
             <div className="space-y-2">
-              <span className="font-mono text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
+              <span className="font-mono text-xs font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full border border-orange-300">
                 Commande N° {orderComplete.orderNumber}
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -248,11 +248,11 @@ export const OrderPage: React.FC = () => {
               </div>
               <div className="flex justify-between text-slate-600">
                 <span>Mode de Paiement :</span>
-                <span className="font-bold text-emerald-600">À la livraison (Cash on Delivery)</span>
+                <span className="font-bold text-brand-500">À la livraison (Cash on Delivery)</span>
               </div>
               <div className="flex justify-between text-base font-bold text-slate-900 pt-3 border-t border-slate-200">
                 <span>Total à régler :</span>
-                <span className="text-amber-600 font-extrabold">{finalTotal} DH</span>
+                <span className="text-brand-500 font-extrabold">{finalTotal} DH</span>
               </div>
             </div>
 
@@ -285,8 +285,8 @@ export const OrderPage: React.FC = () => {
 
         {/* Simple Top Banner */}
         <div className="text-center space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
-            <Clock className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold">
+            <Clock className="w-3.5 h-3.5 text-brand-500" />
             <span>Commande Express en 30 secondes • Paiement à la Livraison</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -307,7 +307,7 @@ export const OrderPage: React.FC = () => {
             <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-xl bg-amber-500 text-white font-bold text-xs flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-xl bg-orange-500 text-white font-bold text-xs flex items-center justify-center shadow-md shadow-orange-500/20">
                     1
                   </div>
                   <h2 className="text-sm font-bold text-slate-900">Article Sélectionné</h2>
@@ -347,7 +347,7 @@ export const OrderPage: React.FC = () => {
                 <select
                   value={selectedId}
                   onChange={(e) => setSelectedId(e.target.value)}
-                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-2xl text-xs font-bold text-slate-900 focus:outline-none focus:border-amber-500"
+                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-2xl text-xs font-bold text-slate-900 focus:outline-none focus:border-orange-500"
                 >
                   {selectedType === "product"
                     ? products.map((p) => (
@@ -364,7 +364,7 @@ export const OrderPage: React.FC = () => {
 
                 {/* Selected Item Preview Card */}
                 {currentItem && (
-                  <div className="flex items-center gap-3 p-3 rounded-2xl bg-gradient-to-r from-amber-50/50 to-slate-50 border border-amber-200/80">
+                  <div className="flex items-center gap-3 p-3 rounded-2xl bg-gradient-to-r from-orange-50/50 to-slate-50 border border-orange-200/80">
                     <div className="w-16 h-16 rounded-xl bg-white border border-slate-200 p-1 flex-shrink-0 flex items-center justify-center overflow-hidden">
                       <img
                         src={currentImage}
@@ -376,7 +376,7 @@ export const OrderPage: React.FC = () => {
                       <h4 className="font-bold text-slate-900 text-xs truncate">
                         {currentItem.name}
                       </h4>
-                      <p className="text-[11px] text-amber-700 font-semibold">
+                      <p className="text-[11px] text-brand-600 font-semibold">
                         {currentItem.price} DH
                         {currentItem.comparePrice && (
                           <span className="text-slate-400 line-through ml-2 font-normal">
@@ -414,7 +414,7 @@ export const OrderPage: React.FC = () => {
             {/* Step 2: Simplified Contact & Delivery Info */}
             <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm space-y-4">
               <div className="flex items-center gap-2.5 pb-3 border-b border-slate-100">
-                <div className="w-7 h-7 rounded-xl bg-amber-500 text-white font-bold text-xs flex items-center justify-center">
+                <div className="w-7 h-7 rounded-xl bg-orange-500 text-white font-bold text-xs flex items-center justify-center shadow-md shadow-orange-500/20">
                   2
                 </div>
                 <div>
@@ -436,7 +436,7 @@ export const OrderPage: React.FC = () => {
                       placeholder="ex: Reda Chraibi"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      className="w-full pl-10 pr-3 py-2.5 bg-white border border-slate-200 rounded-xl text-slate-900 font-medium focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+                      className="w-full pl-10 pr-3 py-2.5 bg-white border border-slate-200 rounded-xl text-slate-900 font-medium focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
                     />
                   </div>
                 </div>
@@ -503,7 +503,7 @@ export const OrderPage: React.FC = () => {
                   className="flex items-center justify-between w-full p-3 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-[11px] font-bold text-slate-700 transition-colors"
                 >
                   <span className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-amber-600" />
+                    <Sparkles className="w-4 h-4 text-brand-500" />
                     <span>Ajouter logo, photo d'ancienne carte ou précisions (Optionnel)</span>
                   </span>
                   {showOptionalFields ? (
@@ -522,13 +522,13 @@ export const OrderPage: React.FC = () => {
                       <select
                         value={selectedTemplate}
                         onChange={(e) => setSelectedTemplate(e.target.value)}
-                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-slate-900 text-xs focus:outline-none focus:border-amber-500"
+                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-slate-900 text-xs focus:outline-none focus:border-orange-500"
                       >
                         <option value="sur_mesure">✨ Sur-mesure (selon mon logo & charte)</option>
                         <option value="luxury_gold">🏆 Luxury Gold Prestige (Immobilier & Luxe)</option>
                         <option value="warm_restaurant">🍽️ Riad & Gastronomie (Restaurants & Cafés)</option>
                         <option value="purple_beauty">✂️ Maison Beauté & Glamour (Salons & Spas)</option>
-                        <option value="emerald_corporate">🏢 Corporate Émeraude (Entreprises & PME)</option>
+                        <option value="emerald_corporate">🏢 Corporate Prestige (Entreprises & PME)</option>
                         <option value="modern_dark">💻 Studio Digital (Tech & Freelance)</option>
                         <option value="medical_clean">⚕️ Cabinet Médical (Santé & Soins)</option>
                       </select>
@@ -548,21 +548,21 @@ export const OrderPage: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-2 gap-3">
-                      <label className="border-2 border-dashed border-slate-200 hover:border-amber-400 rounded-2xl p-3 text-center cursor-pointer bg-white transition-colors block">
+                      <label className="border-2 border-dashed border-slate-200 hover:border-orange-400 rounded-2xl p-3 text-center cursor-pointer bg-white transition-colors block">
                         <input
                           type="file"
                           accept="image/*"
                           onChange={(e) => setOldCardFile(e.target.files?.[0] || null)}
                           className="hidden"
                         />
-                        <Camera className="w-5 h-5 text-amber-600 mx-auto mb-1" />
+                        <Camera className="w-5 h-5 text-brand-500 mx-auto mb-1" />
                         <span className="text-[11px] font-bold text-slate-800 block truncate">
                           {oldCardFile ? "✅ Photo ajoutée" : "Photo de votre carte"}
                         </span>
                         <span className="text-[10px] text-slate-400">JPG, PNG</span>
                       </label>
 
-                      <label className="border-2 border-dashed border-slate-200 hover:border-amber-400 rounded-2xl p-3 text-center cursor-pointer bg-white transition-colors block">
+                      <label className="border-2 border-dashed border-slate-200 hover:border-orange-400 rounded-2xl p-3 text-center cursor-pointer bg-white transition-colors block">
                         <input
                           type="file"
                           accept="image/*"
@@ -599,9 +599,9 @@ export const OrderPage: React.FC = () => {
 
           {/* Right Column: Instant Summary & Actions */}
           <div className="md:col-span-5 sticky top-24 space-y-4">
-            <div className="bg-white rounded-3xl p-6 border border-amber-300 shadow-xl shadow-amber-500/5 space-y-5">
+            <div className="bg-white rounded-3xl p-6 border border-orange-200 shadow-xl shadow-orange-500/5 space-y-5">
               <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                <ShoppingBag className="w-4 h-4 text-amber-600" />
+                <ShoppingBag className="w-4 h-4 text-brand-500" />
                 <span>Récapitulatif Express</span>
               </h3>
 
@@ -613,14 +613,14 @@ export const OrderPage: React.FC = () => {
 
                 <div className="flex justify-between text-slate-600">
                   <span>Configuration du profil :</span>
-                  <span className="font-bold text-emerald-600">Offerte (0 DH)</span>
+                  <span className="font-bold text-brand-600">Offerte (0 DH)</span>
                 </div>
 
                 <div className="flex justify-between text-slate-600">
                   <span>Livraison au Maroc :</span>
                   <span className="font-bold text-slate-900">
                     {deliveryFee === 0 ? (
-                      <span className="text-emerald-600 font-bold">Gratuite</span>
+                      <span className="text-brand-600 font-bold">Gratuite</span>
                     ) : (
                       `${deliveryFee} DH`
                     )}
@@ -631,17 +631,17 @@ export const OrderPage: React.FC = () => {
                   <span className="text-sm font-bold text-slate-900">Total à payer :</span>
                   <div>
                     <span className="text-3xl font-black text-slate-900">{finalTotal}</span>
-                    <span className="text-sm font-bold text-amber-600 ml-1">DH</span>
+                    <span className="text-sm font-bold text-brand-500 ml-1">DH</span>
                   </div>
                 </div>
               </div>
 
               {/* COD Badge */}
-              <div className="p-3 rounded-2xl bg-emerald-50/80 border border-emerald-200 text-xs text-emerald-900 flex items-start gap-2.5">
-                <Truck className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <div className="p-3 rounded-2xl bg-orange-50/80 border border-orange-200 text-xs text-orange-950 flex items-start gap-2.5">
+                <Truck className="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-emerald-900">Paiement à la livraison</p>
-                  <p className="text-[11px] text-emerald-700">Vous réglez en espèces lors de la réception de votre colis.</p>
+                  <p className="font-bold text-orange-950">Paiement à la livraison</p>
+                  <p className="text-[11px] text-orange-800">Vous réglez en espèces lors de la réception de votre colis.</p>
                 </div>
               </div>
 
@@ -650,7 +650,7 @@ export const OrderPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-sm shadow-lg shadow-amber-500/25 transition-all flex items-center justify-center gap-2 active:scale-98"
+                  className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-black text-sm shadow-lg shadow-orange-500/25 transition-all flex items-center justify-center gap-2 active:scale-98"
                 >
                   <ShoppingBag className="w-5 h-5" />
                   <span>{submitting ? "Validation..." : `Valider ma Commande (${finalTotal} DH)`}</span>
@@ -668,7 +668,7 @@ export const OrderPage: React.FC = () => {
 
               <div className="pt-2 border-t border-slate-100 flex items-center justify-center gap-4 text-[11px] text-slate-500 font-medium">
                 <span className="flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                  <ShieldCheck className="w-3.5 h-3.5 text-brand-500" />
                   Garantie 2 ans
                 </span>
                 <span className="flex items-center gap-1">

@@ -3,14 +3,14 @@ import { motion, useInView } from 'framer-motion';
 import { Smartphone, Zap, QrCode, User, BarChart3, RefreshCw, Globe, Shield } from 'lucide-react';
 
 const services = [
-  { icon: User,       color: 'icon-box-emerald', bg: 'hover:border-emerald-200', title: 'Profil Digital Interactif',    desc: 'Page mobile ultra-rapide avec coordonnees, photos, services et liens partageables.' },
-  { icon: Zap,        color: 'icon-box-amber',   bg: 'hover:border-amber-200',   title: 'Puce NFC Haute Sensibilite',   desc: 'Compatible tous iPhone depuis 2018 et Android sans aucune application a installer.' },
-  { icon: QrCode,     color: 'icon-box-blue',    bg: 'hover:border-blue-200',    title: 'QR Code HD Integre',           desc: 'Meme profil accessible via QR code pour les smartphones sans NFC.' },
-  { icon: Smartphone, color: 'icon-box-purple',  bg: 'hover:border-purple-200',  title: 'vCard - 1 Tap Save',           desc: 'Contact enregistre dans le repertoire de votre interlocuteur en un seul geste.' },
-  { icon: BarChart3,  color: 'icon-box-emerald', bg: 'hover:border-emerald-200', title: 'Analytics Temps Reel',         desc: 'Taps NFC, scans QR, clics WhatsApp et telechargements de contact en live.' },
-  { icon: RefreshCw,  color: 'icon-box-amber',   bg: 'hover:border-amber-200',   title: 'Mises a Jour Illimitees',      desc: 'Changez votre telephone ou email a tout moment. La carte reste la meme.' },
-  { icon: Globe,      color: 'icon-box-blue',    bg: 'hover:border-blue-200',    title: 'Multilingue FR / AR / EN',     desc: 'Profil disponible en francais, arabe (RTL) et anglais.' },
-  { icon: Shield,     color: 'icon-box-purple',  bg: 'hover:border-purple-200',  title: 'Securise & RGPD',              desc: 'Conforme loi 09-08 Maroc et RGPD. Hebergement securise SSL.' },
+  { icon: User,       color: 'icon-box-orange',  bg: 'hover:border-orange-200', title: 'Profil Digital Interactif',    desc: 'Page mobile ultra-rapide avec coordonnees, photos, services et liens partageables.' },
+  { icon: Zap,        color: 'icon-box-amber',   bg: 'hover:border-amber-200',  title: 'Puce NFC Haute Sensibilite',   desc: 'Compatible tous iPhone depuis 2018 et Android sans aucune application a installer.' },
+  { icon: QrCode,     color: 'icon-box-blue',    bg: 'hover:border-blue-200',   title: 'QR Code HD Integre',           desc: 'Meme profil accessible via QR code pour les smartphones sans NFC.' },
+  { icon: Smartphone, color: 'icon-box-orange',  bg: 'hover:border-orange-200', title: 'vCard - 1 Tap Save',           desc: 'Contact enregistre dans le repertoire de votre interlocuteur en un seul geste.' },
+  { icon: BarChart3,  color: 'icon-box-amber',   bg: 'hover:border-amber-200',  title: 'Analytics Temps Reel',         desc: 'Taps NFC, scans QR, clics WhatsApp et telechargements de contact en live.' },
+  { icon: RefreshCw,  color: 'icon-box-orange',  bg: 'hover:border-orange-200', title: 'Mises a Jour Illimitees',      desc: 'Changez votre telephone ou email a tout moment. La carte reste la meme.' },
+  { icon: Globe,      color: 'icon-box-blue',    bg: 'hover:border-blue-200',   title: 'Multilingue FR / AR / EN',     desc: 'Profil disponible en francais, arabe (RTL) et anglais.' },
+  { icon: Shield,     color: 'icon-box-orange',  bg: 'hover:border-orange-200', title: 'Securise & RGPD',              desc: 'Conforme loi 09-08 Maroc et RGPD. Hebergement securise SSL.' },
 ];
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };

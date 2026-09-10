@@ -58,12 +58,12 @@ export const Navbar: React.FC = () => {
                     <motion.div key={link.to} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 * i + 0.2 }}>
                       <Link
                         to={link.to}
-                        className={`relative px-3.5 py-2 rounded-xl text-sm font-medium transition-colors link-underline ${active ? 'text-emerald-600' : 'text-gray-600 hover:text-gray-900'}`}
+                        className={`relative px-3.5 py-2 rounded-xl text-sm font-medium transition-colors link-underline ${active ? 'text-orange-600 font-bold' : 'text-gray-600 hover:text-gray-900'}`}
                       >
                         {active && (
                           <motion.span
                             layoutId="nav-pill"
-                            className="absolute inset-0 bg-emerald-50 rounded-xl -z-10"
+                            className="absolute inset-0 bg-orange-50 rounded-xl -z-10"
                             transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                           />
                         )}
@@ -75,7 +75,7 @@ export const Navbar: React.FC = () => {
               </nav>
 
               <motion.div className="hidden md:flex items-center gap-3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
-                <Link to="/demo" className="px-4 py-2 rounded-xl text-sm font-semibold text-gray-700 border border-gray-200 hover:border-emerald-400 hover:text-emerald-600 transition-all duration-200">
+                <Link to="/demo" className="px-4 py-2 rounded-xl text-sm font-semibold text-gray-700 border border-gray-200 hover:border-orange-400 hover:text-orange-600 transition-all duration-200">
                   Demo Live
                 </Link>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -110,7 +110,7 @@ export const Navbar: React.FC = () => {
               </div>
               {navLinks.map((link, i) => (
                 <motion.div key={link.to} initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.05 * i + 0.1 }}>
-                  <Link to={link.to} className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-all ${location.pathname === link.to ? 'bg-emerald-50 text-emerald-600' : 'text-gray-700 hover:bg-gray-50 hover:text-emerald-600'}`}>{link.label}</Link>
+                  <Link to={link.to} className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-all ${location.pathname === link.to ? 'bg-orange-50 text-orange-600 font-bold' : 'text-gray-700 hover:bg-orange-50/50 hover:text-orange-600'}`}>{link.label}</Link>
                 </motion.div>
               ))}
               <div className="pt-6 mt-auto space-y-3">

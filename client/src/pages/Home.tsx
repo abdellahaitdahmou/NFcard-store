@@ -36,7 +36,7 @@ function ReviewCard({ r, i }: { r: typeof reviews[0]; i: number }) {
       <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
         <div>
           <p className="font-bold text-gray-900 text-sm">{r.name}</p>
-          <p className="text-xs text-emerald-600 font-medium mt-0.5">{r.role}</p>
+          <p className="text-xs text-orange-600 font-semibold mt-0.5">{r.role}</p>
         </div>
         <span className="text-xs text-gray-400">{r.city}</span>
       </div>
@@ -87,19 +87,19 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Final CTA */}
-      <section ref={ctaRef} className="py-28 bg-gradient-to-b from-slate-50 via-amber-50/40 to-white text-slate-900 relative overflow-hidden border-t border-amber-200/60">
+      <section ref={ctaRef} className="py-28 bg-gradient-to-b from-slate-50 via-orange-50/40 to-white text-slate-900 relative overflow-hidden border-t border-orange-200/60">
         {/* bg orbs */}
         <div className="absolute inset-0 pointer-events-none">
-          <motion.div className="blob w-[500px] h-[500px] bg-emerald-200/40 top-[-20%] left-[-10%]" animate={{ scale: [1, 1.1, 1], x: [0, 20, 0] }} transition={{ duration: 10, repeat: Infinity }} />
+          <motion.div className="blob w-[500px] h-[500px] bg-orange-200/40 top-[-20%] left-[-10%]" animate={{ scale: [1, 1.1, 1], x: [0, 20, 0] }} transition={{ duration: 10, repeat: Infinity }} />
           <motion.div className="blob w-[400px] h-[400px] bg-amber-200/50 bottom-[-20%] right-[-5%]" animate={{ scale: [1, 0.9, 1], x: [0, -15, 0] }} transition={{ duration: 14, repeat: Infinity, delay: 3 }} />
         </div>
 
         <div className="relative max-w-4xl mx-auto px-4 text-center space-y-8">
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold"
             initial={{ opacity: 0, y: 20 }} animate={ctaInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1 }}
           >
-            <Zap className="w-3.5 h-3.5 text-amber-400" />
+            <Zap className="w-3.5 h-3.5 text-orange-500" />
             Offre de lancement - Livraison gratuite
           </motion.div>
 
@@ -142,7 +142,7 @@ export const Home: React.FC = () => {
           >
             {['Sans application','Paiement a la livraison','Livraison 24h/48h','Profil offert'].map((t) => (
               <span key={t} className="flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-emerald-500" />
+                <CheckCircle className="w-4 h-4 text-orange-500" />
                 {t}
               </span>
             ))}

@@ -32,8 +32,8 @@ export const Contact: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-orange-600" />
             <span>Support & Assistance Client au Maroc</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -54,7 +54,7 @@ export const Contact: React.FC = () => {
               
               <div className="space-y-5 text-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center flex-shrink-0">
+                  <div className="w-11 h-11 rounded-2xl bg-orange-50 text-orange-600 border border-orange-200 flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -105,8 +105,8 @@ export const Contact: React.FC = () => {
               <h3 className="font-bold text-slate-900 text-xl">Envoyez-nous un message</h3>
 
               {sent ? (
-                <div className="p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3">
-                  <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
+                <div className="p-8 rounded-2xl bg-orange-50 border border-orange-200 text-center space-y-3">
+                  <CheckCircle2 className="w-10 h-10 text-orange-500 mx-auto" />
                   <h4 className="font-bold text-slate-900 text-lg">Message envoyé avec succès !</h4>
                   <p className="text-xs text-slate-600">Notre équipe commerciale vous répondra dans les plus brefs délais.</p>
                 </div>

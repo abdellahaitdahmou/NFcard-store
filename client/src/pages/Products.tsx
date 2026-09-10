@@ -55,8 +55,8 @@ export const Products: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-orange-600" />
             <span>Catalogue Officiel NFcard Maroc</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -76,7 +76,7 @@ export const Products: React.FC = () => {
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                   activeCategory === cat.id
                     ? "bg-slate-900 text-white shadow-md"
-                    : "bg-white border border-slate-200 text-slate-600 hover:border-slate-300"
+                    : "bg-white border border-slate-200 text-slate-600 hover:border-orange-300"
                 }`}
               >
                 {cat.label}
@@ -99,13 +99,13 @@ export const Products: React.FC = () => {
                 key={prod.id}
                 className={`bg-white rounded-2xl sm:rounded-3xl border transition-all duration-300 flex flex-col justify-between overflow-hidden relative group ${
                   prod.isPopular
-                    ? "border-amber-400 shadow-xl shadow-amber-500/10 ring-2 ring-amber-400/20"
+                    ? "border-orange-400 shadow-xl shadow-orange-500/10 ring-2 ring-orange-400/20"
                     : "border-slate-200 hover:border-slate-300 shadow-sm hover:shadow-md"
                 }`}
               >
                 {/* Popular Badge */}
                 {prod.isPopular && (
-                  <div className="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black text-[10px] uppercase tracking-wider shadow-md flex items-center gap-1">
+                  <div className="absolute top-3 right-3 z-10 px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-[10px] uppercase tracking-wider shadow-md flex items-center gap-1">
                     <Flame className="w-3 h-3" />
                     <span>{prod.badge || "Populaire"}</span>
                   </div>
@@ -128,7 +128,7 @@ export const Products: React.FC = () => {
                   <div className="p-5 sm:p-6 space-y-4">
                     <div>
                       <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-1.5 leading-snug">{prod.name}</h3>
-                      <p className="text-xs text-amber-700 font-semibold mb-2">{prod.tagline}</p>
+                      <p className="text-xs text-orange-600 font-semibold mb-2">{prod.tagline}</p>
                       <p className="text-xs text-slate-500 leading-relaxed">{prod.description}</p>
                     </div>
 
@@ -137,7 +137,7 @@ export const Products: React.FC = () => {
                       <span className="text-xs text-slate-500 font-medium">Tarif</span>
                       <div>
                         <span className="text-2xl sm:text-3xl font-black text-slate-900">{prod.price}</span>
-                        <span className="text-sm font-bold text-amber-600 ml-1">DH</span>
+                        <span className="text-sm font-bold text-orange-500 ml-1">DH</span>
                         {prod.comparePrice && (
                           <span className="text-xs text-slate-400 line-through ml-2">
                             {prod.comparePrice} DH
@@ -150,7 +150,7 @@ export const Products: React.FC = () => {
                     <ul className="space-y-2 text-xs text-slate-700 pt-1">
                       {prod.features.slice(0, 5).map((feat, fIdx) => (
                         <li key={fIdx} className="flex items-start gap-2 leading-relaxed">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-orange-500 flex-shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -165,7 +165,7 @@ export const Products: React.FC = () => {
                     onClick={() => setQuickOrderItem(prod)}
                     className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-black text-xs shadow-md transition-all active:scale-98 ${
                       prod.isPopular
-                        ? "bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-amber-500/25"
+                        ? "bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-orange-500/25"
                         : "bg-slate-900 hover:bg-slate-800 text-white"
                     }`}
                   >

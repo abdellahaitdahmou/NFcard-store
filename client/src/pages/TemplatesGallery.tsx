@@ -110,8 +110,8 @@ export const TemplatesGallery: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold shadow-sm">
-            <Palette className="w-3.5 h-3.5 text-amber-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold shadow-sm">
+            <Palette className="w-3.5 h-3.5 text-brand-500" />
             <span>Galerie de Thèmes & Modèles Professionnels</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -218,8 +218,8 @@ export const TemplatesGallery: React.FC = () => {
 
         {/* Custom Design Banner */}
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm text-center max-w-4xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold">
+            <Sparkles className="w-3.5 h-3.5 text-brand-500" />
             <span>Service Graphique Sur-Mesure Inclus</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -231,7 +231,7 @@ export const TemplatesGallery: React.FC = () => {
           <div className="pt-2">
             <Link
               to="/commander"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs shadow-md shadow-amber-500/20 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs shadow-md shadow-orange-500/20 transition-all"
             >
               <span>Créer mon profil personnalisé</span>
               <ArrowRight className="w-4 h-4" />

@@ -318,14 +318,14 @@ export const PortfolioExemple: React.FC = () => {
       <section className="bg-gradient-to-b from-amber-50/80 via-white to-slate-50 text-slate-900 py-20 relative overflow-hidden border-b border-amber-200/50">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
-          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-bold" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <Eye className="w-3.5 h-3.5" /> Apercu Interactif - Choisissez votre secteur
+          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold shadow-sm" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+            <Eye className="w-3.5 h-3.5 text-brand-500" /> Aperçu Interactif - Choisissez votre secteur
           </motion.div>
           <motion.h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}>
             Votre profil digital, tel que<br /><span className="gold-gradient-text">vos clients le verront.</span>
           </motion.h1>
           <motion.p className="text-slate-600 text-lg max-w-2xl mx-auto font-medium" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-            Selectionnez votre secteur pour voir exactement a quoi ressemblera votre profil NFC personnalise apres un tap.
+            Sélectionnez votre secteur pour voir exactement à quoi ressemblera votre profil NFC personnalisé après un tap.
           </motion.p>
         </div>
       </section>
@@ -354,20 +354,20 @@ export const PortfolioExemple: React.FC = () => {
                       {active.icon} {active.emoji} Pack {active.label}
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3">
-                      Profil digital pour<br /><span className="emerald-gradient-text">{active.label}</span>
+                      Profil digital pour<br /><span className="gold-gradient-text">{active.label}</span>
                     </h2>
                     <p className="text-gray-500 text-sm leading-relaxed">
-                      Voici ce que vos clients verront apres avoir tape votre carte NFC. Tout est personnalise avec vos vraies informations, logo, services et photos.
+                      Voici ce que vos clients verront après avoir tapé votre carte NFC. Tout est personnalisé avec vos vraies informations, logo, services et photos.
                     </p>
                   </motion.div>
                 </AnimatePresence>
 
                 <div className="flex items-center gap-3">
-                  <motion.button onClick={prev} className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-gray-200 text-gray-600 text-sm font-semibold hover:border-emerald-400 hover:text-emerald-600 bg-white transition-all" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                    <ChevronLeft className="w-4 h-4" />Precedent
+                  <motion.button onClick={prev} className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-gray-200 text-gray-600 text-sm font-semibold hover:border-orange-400 hover:text-orange-600 bg-white transition-all" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                    <ChevronLeft className="w-4 h-4" />Précédent
                   </motion.button>
                   <span className="text-xs text-gray-400 font-medium flex-1 text-center">{activeIdx + 1} / {categories.length}</span>
-                  <motion.button onClick={next} className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-gray-200 text-gray-600 text-sm font-semibold hover:border-emerald-400 hover:text-emerald-600 bg-white transition-all" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                  <motion.button onClick={next} className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-gray-200 text-gray-600 text-sm font-semibold hover:border-orange-400 hover:text-orange-600 bg-white transition-all" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                     Suivant<ChevronRight className="w-4 h-4" />
                   </motion.button>
                 </div>
@@ -377,7 +377,7 @@ export const PortfolioExemple: React.FC = () => {
                   <div className="grid grid-cols-1 gap-2">
                     {features.map((f, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-gray-600">
-                        <CheckCircle className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />{f}
+                        <CheckCircle className="w-3.5 h-3.5 text-brand-500 flex-shrink-0 mt-0.5" />{f}
                       </div>
                     ))}
                   </div>
@@ -398,12 +398,12 @@ export const PortfolioExemple: React.FC = () => {
               <div className="max-w-sm mx-auto">
                 <div className="flex justify-center gap-1.5 mb-4">
                   {categories.map((_, i) => (
-                    <button key={i} onClick={() => goTo(i)} className={"transition-all duration-300 rounded-full " + (i === activeIdx ? "w-6 h-2 bg-emerald-500" : "w-2 h-2 bg-gray-300 hover:bg-gray-400")} />
+                    <button key={i} onClick={() => goTo(i)} className={"transition-all duration-300 rounded-full " + (i === activeIdx ? "w-6 h-2 bg-orange-500" : "w-2 h-2 bg-gray-300 hover:bg-gray-400")} />
                   ))}
                 </div>
-                <div className="bg-slate-100 rounded-[48px] p-3.5 shadow-2xl border-4 border-slate-300 ring-1 ring-slate-200 shadow-amber-500/10">
+                <div className="bg-slate-100 rounded-[48px] p-3.5 shadow-2xl border-4 border-slate-300 ring-1 ring-slate-200 shadow-orange-500/10">
                   <div className="mx-auto w-28 h-6 bg-slate-300 rounded-full mb-2 flex items-center justify-end pr-3">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 animate-pulse" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-orange-500/80 animate-pulse" />
                   </div>
                   <div className="bg-white rounded-[38px] overflow-hidden" style={{ height: "70vh", overflowY: "auto" }}>
                     <AnimatePresence mode="wait" custom={direction}>
@@ -413,7 +413,7 @@ export const PortfolioExemple: React.FC = () => {
                     </AnimatePresence>
                   </div>
                 </div>
-                <p className="text-center text-xs text-gray-400 mt-3">Scrollez dans le telephone pour voir le profil complet</p>
+                <p className="text-center text-xs text-gray-400 mt-3">Scrollez dans le téléphone pour voir le profil complet</p>
               </div>
             </div>
           </div>

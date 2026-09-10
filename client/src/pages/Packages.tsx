@@ -32,8 +32,8 @@ export const Packages: React.FC = () => {
         
         {/* Page Banner */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold shadow-sm">
-            <Briefcase className="w-3.5 h-3.5 text-amber-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold shadow-sm">
+            <Briefcase className="w-3.5 h-3.5 text-orange-600" />
             <span>Packs Métiers Prêts à l'Emploi</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -49,8 +49,8 @@ export const Packages: React.FC = () => {
         <BusinessSolutionsGrid />
 
         {/* Custom Business Quote Banner */}
-        <div className="bg-gradient-to-br from-amber-50 via-white to-orange-50/40 p-8 sm:p-12 rounded-3xl border border-amber-200 shadow-xl shadow-amber-500/5 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">
+        <div className="bg-gradient-to-br from-orange-50 via-white to-amber-50/40 p-8 sm:p-12 rounded-3xl border border-orange-200 shadow-xl shadow-orange-500/5 text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-900 text-xs font-bold">
             <span>Solution Entreprises & Équipes</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">

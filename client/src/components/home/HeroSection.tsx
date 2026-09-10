@@ -21,10 +21,10 @@ function useCountUp(target: number, duration = 2000, start = false) {
 }
 
 const stats = [
-  { value: 850, suffix: '+', label: 'Professionnels', color: 'text-emerald-600' },
-  { value: 12, suffix: '', label: 'Villes au Maroc', color: 'text-amber-600' },
-  { value: 24, suffix: 'h', label: 'Livraison Express', color: 'text-blue-600' },
-  { value: 99, suffix: '%', label: 'Satisfaction Client', color: 'text-purple-600' },
+  { value: 850, suffix: '+', label: 'Professionnels', color: 'text-orange-500' },
+  { value: 12, suffix: '', label: 'Villes au Maroc', color: 'text-amber-500' },
+  { value: 24, suffix: 'h', label: 'Livraison Express', color: 'text-orange-600' },
+  { value: 99, suffix: '%', label: 'Satisfaction Client', color: 'text-orange-500' },
 ];
 
 const trustBadges = [
@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
       {/* Animated background blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="blob w-[600px] h-[600px] bg-emerald-200/50 top-[-10%] right-[-5%]"
+          className="blob w-[600px] h-[600px] bg-orange-200/50 top-[-10%] right-[-5%]"
           animate={{ scale: [1, 1.1, 0.95, 1], x: [0, 30, -10, 0], y: [0, -20, 15, 0] }}
           transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
         />
@@ -66,7 +66,7 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
         />
         <motion.div
-          className="blob w-[350px] h-[350px] bg-blue-200/30 top-[40%] left-[35%]"
+          className="blob w-[350px] h-[350px] bg-orange-100/40 top-[40%] left-[35%]"
           animate={{ scale: [1, 1.15, 0.9, 1], x: [0, 20, -25, 0], y: [0, -30, 10, 0] }}
           transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 7 }}
         />
@@ -83,12 +83,12 @@ export const HeroSection: React.FC = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-emerald-200 shadow-sm shadow-emerald-100">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-orange-200 shadow-sm shadow-orange-100">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500" />
               </span>
-              <span className="text-xs font-bold text-emerald-800">N°1 au Maroc · +850 Professionnels equipés</span>
+              <span className="text-xs font-bold text-orange-800">N°1 au Maroc · +850 Professionnels equipés</span>
             </div>
           </motion.div>
 
@@ -139,8 +139,8 @@ export const HeroSection: React.FC = () => {
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.03, y: -2 }} whileTap={{ scale: 0.97 }}>
-              <Link to="/demo" className="btn-outline flex items-center gap-2 rounded-2xl px-8 py-4 text-base">
-                <Play className="w-4 h-4 text-emerald-600 fill-emerald-600" />
+              <Link to="/demo" className="btn-outline flex items-center gap-2 rounded-2xl px-8 py-4 text-base font-semibold">
+                <Play className="w-4 h-4 text-orange-500 fill-orange-500" />
                 Voir la demo
               </Link>
             </motion.div>
@@ -161,7 +161,7 @@ export const HeroSection: React.FC = () => {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.95 + i * 0.08 }}
               >
-                <Icon className="w-4 h-4 text-emerald-500" />
+                <Icon className="w-4 h-4 text-orange-500" />
                 {text}
               </motion.span>
             ))}
@@ -182,7 +182,7 @@ export const HeroSection: React.FC = () => {
               className="absolute inset-8 rounded-full"
               animate={{ opacity: [0.3, 0.7, 0.3] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              style={{ background: 'radial-gradient(circle, rgba(5,150,105,0.25) 0%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(253,103,1,0.30) 0%, transparent 70%)' }}
             />
 
             {/* The NFC card */}

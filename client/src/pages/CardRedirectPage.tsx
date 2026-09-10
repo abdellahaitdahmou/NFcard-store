@@ -41,7 +41,7 @@ export const CardRedirectPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center text-gray-900">
       <div className="text-center space-y-4">
-        <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center animate-ping">
+        <div className="w-16 h-16 rounded-full bg-orange-500/20 text-brand-500 mx-auto flex items-center justify-center animate-ping">
           <Zap className="w-8 h-8" />
         </div>
         <h2 className="text-lg font-bold">Connexion NFC Sécurisée...</h2>

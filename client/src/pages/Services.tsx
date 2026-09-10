@@ -9,7 +9,7 @@ export const Services: React.FC = () => {
     <div className="space-y-0">
       <div className="py-12 bg-gray-100 border-b border-gray-200 text-center">
         <div className="max-w-4xl mx-auto px-4 space-y-4">
-          <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+          <span className="text-xs font-bold px-3 py-1 rounded-full bg-orange-50 text-orange-800 border border-orange-200 shadow-sm">
             Expertise & Savoir-faire NFcard
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900">

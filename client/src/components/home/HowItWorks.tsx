@@ -1,11 +1,11 @@
-﻿import React, { useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Package, Camera, Sparkles, Zap } from 'lucide-react';
 
 const steps = [
-  { n: '01', icon: Package,   color: 'icon-box-emerald', title: 'Commandez en ligne',  desc: 'Choisissez votre carte NFC et votre pack metier en quelques clics. Paiement a la livraison.' },
+  { n: '01', icon: Package,   color: 'icon-box-orange', title: 'Commandez en ligne',  desc: 'Choisissez votre carte NFC et votre pack metier en quelques clics. Paiement a la livraison.' },
   { n: '02', icon: Camera,    color: 'icon-box-amber',   title: 'Envoyez vos infos',   desc: 'Photo de votre ancienne carte papier ou formulaire simple — nos graphistes font tout.' },
-  { n: '03', icon: Sparkles,  color: 'icon-box-blue',    title: 'On cree votre profil', desc: 'Profil digital premium concu en 24h avec votre logo, liens et services.' },
+  { n: '03', icon: Sparkles,  color: 'icon-box-orange',  title: 'On cree votre profil', desc: 'Profil digital premium concu en 24h avec votre logo, liens et services.' },
   { n: '04', icon: Zap,       color: 'icon-box-amber',   title: 'Tapez et partagez',   desc: 'Un tap sur n importe quel smartphone ouvre instantanement votre profil.' },
 ];
 
@@ -27,7 +27,7 @@ export const HowItWorks: React.FC = () => {
           transition={{ duration: 0.7 }}
           ref={ref}
         >
-          <motion.div className="badge badge-emerald mx-auto mb-4 block w-fit" initial={{ scale: 0 }} animate={inView ? { scale: 1 } : {}} transition={{ type: 'spring', delay: 0.2 }}>
+          <motion.div className="badge badge-orange mx-auto mb-4 block w-fit" initial={{ scale: 0 }} animate={inView ? { scale: 1 } : {}} transition={{ type: 'spring', delay: 0.2 }}>
             Comment ca marche
           </motion.div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-5">
@@ -46,7 +46,7 @@ export const HowItWorks: React.FC = () => {
           animate={inView ? 'show' : 'hidden'}
         >
           {/* Connecting line */}
-          <div className="hidden lg:block absolute top-[36px] left-[14%] right-[14%] h-px bg-gradient-to-r from-emerald-200 via-amber-200 to-emerald-200 z-0" />
+          <div className="hidden lg:block absolute top-[36px] left-[14%] right-[14%] h-px bg-gradient-to-r from-orange-200 via-amber-200 to-orange-200 z-0" />
 
           {steps.map((s, i) => (
             <motion.div

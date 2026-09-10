@@ -109,14 +109,14 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
-                        <Icon className={`w-4 h-4 ${isActive ? "text-amber-400" : "text-slate-400"}`} />
+                        <Icon className={`w-4 h-4 ${isActive ? "text-brand-500" : "text-slate-400"}`} />
                         <span>{item.label}</span>
                       </div>
                       {item.badge && (
                         <span className={`text-[9px] font-extrabold px-1.5 py-0.5 rounded-full ${
                           isActive
-                            ? "bg-amber-400 text-slate-950"
-                            : "bg-emerald-100 text-emerald-800"
+                            ? "bg-brand-500 text-white"
+                            : "bg-orange-100 text-orange-800"
                         }`}>
                           {item.badge}
                         </span>
@@ -136,7 +136,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
               <p className="text-xs font-bold text-slate-900 truncate">{user?.name || "Directeur NFcard"}</p>
               <p className="text-[10px] text-slate-500 truncate">{user?.email || "admin@nfcard.ma"}</p>
             </div>
-            <span className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" title="En ligne" />
+            <span className="w-2 h-2 rounded-full bg-brand-500 flex-shrink-0" title="En ligne" />
           </div>
 
           <div className="flex items-center gap-2">
@@ -174,15 +174,15 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-[11px] font-bold">
+              <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
               <span>Système NFC Opérationnel</span>
             </div>
 
             <Link
               to="/commander"
               target="_blank"
-              className="px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-xs transition-colors"
+              className="px-3.5 py-1.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs shadow-xs transition-colors"
             >
               + Passer commande
             </Link>

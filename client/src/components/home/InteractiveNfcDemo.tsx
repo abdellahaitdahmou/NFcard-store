@@ -84,13 +84,13 @@ export const InteractiveNfcDemo: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold shadow-sm">
-            <Smartphone className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-semibold shadow-sm">
+            <Smartphone className="w-3.5 h-3.5 text-orange-500" />
             <span>Simulateur en Direct</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
             Testez l'expérience client <br />
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">sur smartphone virtuel.</span>
+            <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">sur smartphone virtuel.</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg">
             Cliquez sur "Simuler un Tap NFC" pour voir comment la carte connectée réagit instantanément sur un smartphone.
@@ -141,19 +141,19 @@ export const InteractiveNfcDemo: React.FC = () => {
               
               <div className="space-y-4 text-xs sm:text-sm text-slate-600">
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-orange-100 text-orange-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                     1
                   </div>
                   <p><strong className="text-slate-900">Approchez votre carte NFC</strong> du haut d'un iPhone ou du dos d'un smartphone Android.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-orange-100 text-orange-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                     2
                   </div>
                   <p><strong className="text-slate-900">Une notification apparaît</strong> automatiquement sans aucune application à installer.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-orange-100 text-orange-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                     3
                   </div>
                   <p><strong className="text-slate-900">Le profil s'ouvre</strong> avec vos liens directs WhatsApp, vCard et itinéraire Maps.</p>
@@ -163,9 +163,9 @@ export const InteractiveNfcDemo: React.FC = () => {
               <div className="pt-2">
                 <button
                   onClick={handleSimulateTap}
-                  className="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 transform active:scale-95"
+                  className="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-sm shadow-lg shadow-orange-500/20 transition-all flex items-center justify-center gap-2 transform active:scale-95"
                 >
-                  <Zap className="w-4 h-4 text-amber-300" />
+                  <Zap className="w-4 h-4 text-amber-100" />
                   <span>Simuler un Tap NFC sur l'écran</span>
                 </button>
               </div>
@@ -180,7 +180,7 @@ export const InteractiveNfcDemo: React.FC = () => {
               
               {/* Dynamic Island / Speaker Notch */}
               <div className="absolute top-6 left-1/2 -translate-x-1/2 w-24 h-5 bg-slate-300 rounded-full z-30 flex items-center justify-end px-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 animate-pulse" />
+                <div className="w-2.5 h-2.5 rounded-full bg-orange-500/80 animate-pulse" />
               </div>
 
               {/* Screen Canvas */}
@@ -190,7 +190,7 @@ export const InteractiveNfcDemo: React.FC = () => {
                 {showAnimation && (
                   <div className="absolute inset-0 bg-black/80 z-40 flex items-center justify-center p-6 text-center space-y-3">
                     <div>
-                      <div className="w-16 h-16 rounded-full bg-emerald-500/30 border border-emerald-400 text-emerald-400 mx-auto flex items-center justify-center animate-ping mb-4">
+                      <div className="w-16 h-16 rounded-full bg-orange-500/30 border border-orange-400 text-orange-400 mx-auto flex items-center justify-center animate-ping mb-4">
                         <Zap className="w-8 h-8" />
                       </div>
                       <p className="font-bold text-sm text-white">Lecture de la puce NFC...</p>
@@ -205,7 +205,7 @@ export const InteractiveNfcDemo: React.FC = () => {
                     
                     {/* Header profile info */}
                     <div className="text-center space-y-2">
-                      <div className="w-20 h-20 rounded-2xl mx-auto p-[2px] bg-gradient-to-tr from-amber-400 to-emerald-400 overflow-hidden shadow-lg">
+                      <div className="w-20 h-20 rounded-2xl mx-auto p-[2px] bg-gradient-to-tr from-orange-400 to-amber-400 overflow-hidden shadow-lg">
                         <img src={current.avatar} alt={current.name} className="w-full h-full object-cover rounded-[14px]" />
                       </div>
                       <div>

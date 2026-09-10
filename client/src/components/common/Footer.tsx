@@ -59,14 +59,14 @@ export const Footer: React.FC = () => {
           >
             <Link to="/" className="inline-flex items-center gap-2.5 group">
               <motion.div
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-md p-1.5"
+                className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-md p-1.5 shadow-orange-500/20"
                 whileHover={{ scale: 1.1, rotate: -5 }}
               >
                 <img src="/logo-icon.png" alt="NFcard Logo" className="w-full h-full object-contain" />
               </motion.div>
               <span className="font-extrabold text-slate-900 text-2xl tracking-tight flex items-center">
-                NF<span className="text-amber-600">card</span>
-                <span className="text-[10px] text-amber-700 font-bold ml-1.5 uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200">.ma</span>
+                NF<span className="text-orange-500">card</span>
+                <span className="text-[10px] text-orange-700 font-bold ml-1.5 uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange-50 border border-orange-200">.ma</span>
               </span>
             </Link>
 
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
             
             {/* Col 1: Navigation */}
             <div className="space-y-3 flex flex-col items-center">
-              <h4 className="font-bold text-slate-900 text-xs sm:text-sm uppercase tracking-wider text-amber-700">Navigation</h4>
+              <h4 className="font-bold text-slate-900 text-xs sm:text-sm uppercase tracking-wider text-orange-600">Navigation</h4>
               <ul className="space-y-2 text-center">
                 {[
                   { to: '/products', l: 'Nos Produits' },
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
                   { to: '/demo', l: 'Démo Interactive' },
                 ].map((lk) => (
                   <li key={lk.l}>
-                    <Link to={lk.to} className="text-xs text-slate-500 hover:text-amber-600 transition-colors link-underline font-medium">
+                    <Link to={lk.to} className="text-xs text-slate-500 hover:text-orange-600 transition-colors link-underline font-medium">
                       {lk.l}
                     </Link>
                   </li>
@@ -116,7 +116,7 @@ export const Footer: React.FC = () => {
 
             {/* Col 2: Packs Métiers */}
             <div className="space-y-3 flex flex-col items-center">
-              <h4 className="font-bold text-slate-900 text-xs sm:text-sm uppercase tracking-wider text-amber-700">Packs Métiers</h4>
+              <h4 className="font-bold text-slate-900 text-xs sm:text-sm uppercase tracking-wider text-orange-600">Packs Métiers</h4>
               <ul className="space-y-2 text-center">
                 {[
                   { to: '/packs', l: 'Restaurant & Café' },
@@ -127,7 +127,7 @@ export const Footer: React.FC = () => {
                   { to: '/commander', l: 'Commander ma carte' },
                 ].map((lk) => (
                   <li key={lk.l}>
-                    <Link to={lk.to} className="text-xs text-slate-500 hover:text-amber-600 transition-colors link-underline font-medium">
+                    <Link to={lk.to} className="text-xs text-slate-500 hover:text-orange-600 transition-colors link-underline font-medium">
                       {lk.l}
                     </Link>
                   </li>
@@ -137,10 +137,10 @@ export const Footer: React.FC = () => {
 
             {/* Col 3: Contact & Support */}
             <div className="space-y-3 flex flex-col items-center col-span-2 md:col-span-1">
-              <h4 className="font-bold text-slate-900 text-xs sm:text-sm uppercase tracking-wider text-amber-700">Contact</h4>
+              <h4 className="font-bold text-slate-900 text-xs sm:text-sm uppercase tracking-wider text-orange-600">Contact</h4>
               <div className="space-y-2.5 text-xs text-slate-600 flex flex-col items-center text-center">
-                <p className="flex items-center gap-2 justify-center"><Phone className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" /> {settings.supportPhone}</p>
-                <p className="flex items-center gap-2 justify-center"><Mail className="w-3.5 h-3.5 text-amber-600 flex-shrink-0" /> {settings.supportEmail}</p>
+                <p className="flex items-center gap-2 justify-center"><Phone className="w-3.5 h-3.5 text-orange-500 flex-shrink-0" /> {settings.supportPhone}</p>
+                <p className="flex items-center gap-2 justify-center"><Mail className="w-3.5 h-3.5 text-orange-500 flex-shrink-0" /> {settings.supportEmail}</p>
                 <p className="flex items-center gap-2 justify-center"><MapPin className="w-3.5 h-3.5 text-blue-600 flex-shrink-0" /> Casablanca & Marrakech</p>
                 <p className="text-[11px] text-slate-500 pt-1 font-medium text-center">🇲🇦 Expédition dans tout le Maroc</p>
               </div>

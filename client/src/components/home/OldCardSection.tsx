@@ -14,20 +14,20 @@ export const OldCardSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-amber-50/60 via-orange-50/40 to-slate-50 border-y border-amber-200/50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-orange-50/60 via-amber-50/40 to-slate-50 border-y border-orange-200/50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-amber-200/80 shadow-xl shadow-amber-500/5 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-orange-200/80 shadow-xl shadow-orange-500/5 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/70 border border-amber-300/80 text-amber-900 text-xs font-bold shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/70 border border-orange-300/80 text-orange-900 text-xs font-bold shadow-sm">
+              <Sparkles className="w-3.5 h-3.5 text-orange-600" />
               <span>Service de Numérisation Clé-en-main Maroc</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
               Vous avez déjà une <br />
-              <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">ancienne carte de visite papier ?</span>
+              <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">ancienne carte de visite papier ?</span>
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -36,15 +36,15 @@ export const OldCardSection: React.FC = () => {
 
             <div className="space-y-3 pt-2">
               <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
                 <span>Extraction automatique de votre logo, téléphone, WhatsApp et adresse</span>
               </div>
               <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
                 <span>Création & mise en page par nos designers qualifiés en 24h</span>
               </div>
               <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
                 <span>Validation sur WhatsApp avant impression et expédition de votre carte NFC</span>
               </div>
             </div>

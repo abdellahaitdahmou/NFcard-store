@@ -1,4 +1,4 @@
-﻿/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
@@ -9,16 +9,30 @@ module.exports = {
       },
       colors: {
         brand: {
-          50:  "#ecfdf5",
-          100: "#d1fae5",
-          200: "#a7f3d0",
-          300: "#6ee7b7",
-          400: "#34d399",
-          500: "#10b981",
-          600: "#059669",
-          700: "#047857",
-          800: "#065f46",
-          900: "#064e3b",
+          50:  "#fff7ed",
+          100: "#ffedd5",
+          200: "#fed7aa",
+          300: "#fdba74",
+          400: "#fb923c",
+          500: "#fd6701", // Official NFcard Logo Orange
+          600: "#ea580c",
+          700: "#c2410c",
+          800: "#9a3412",
+          900: "#7c2d12",
+          950: "#431407",
+        },
+        orange: {
+          50:  "#fff7ed",
+          100: "#ffedd5",
+          200: "#fed7aa",
+          300: "#fdba74",
+          400: "#fb923c",
+          500: "#fd6701",
+          600: "#ea580c",
+          700: "#c2410c",
+          800: "#9a3412",
+          900: "#7c2d12",
+          950: "#431407",
         },
         gold: {
           50:  "#fffbeb",
@@ -41,7 +55,8 @@ module.exports = {
       boxShadow: {
         "card":   "0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.05)",
         "card-hover": "0 4px 20px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06)",
-        "glow-emerald": "0 0 30px rgba(5,150,105,0.25), 0 4px 16px rgba(5,150,105,0.15)",
+        "glow-brand": "0 0 30px rgba(253,103,1,0.30), 0 4px 16px rgba(253,103,1,0.20)",
+        "glow-orange": "0 0 30px rgba(253,103,1,0.30), 0 4px 16px rgba(253,103,1,0.20)",
         "glow-gold": "0 0 30px rgba(245,158,11,0.3), 0 4px 16px rgba(245,158,11,0.2)",
       },
       animation: {

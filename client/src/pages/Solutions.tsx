@@ -173,8 +173,8 @@ export const Solutions: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-brand-500" />
             <span>Solutions Métiers Spécifiques au Maroc</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -196,7 +196,7 @@ export const Solutions: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.05, duration: 0.4 }}
-                className="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-amber-300 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-orange-300 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-4">
@@ -209,13 +209,13 @@ export const Solutions: React.FC = () => {
                   </div>
 
                   <h3 className="text-lg font-bold text-slate-900 mb-1">{sec.name}</h3>
-                  <p className="text-xs text-amber-600 font-semibold mb-3">{sec.tagline}</p>
+                  <p className="text-xs text-brand-600 font-semibold mb-3">{sec.tagline}</p>
                   <p className="text-xs text-slate-500 leading-relaxed mb-5">{sec.desc}</p>
 
                   <div className="space-y-2 mb-6 pt-2 border-t border-slate-100">
                     {sec.features.map((feat, fIdx) => (
                       <div key={fIdx} className="flex items-start gap-2 text-xs text-slate-600 leading-relaxed">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-500 flex-shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -227,7 +227,7 @@ export const Solutions: React.FC = () => {
                     to={sec.link}
                     className="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
                   >
-                    <Eye className="w-3.5 h-3.5 text-amber-600" />
+                    <Eye className="w-3.5 h-3.5 text-brand-500" />
                     <span>Voir l'exemple en direct</span>
                   </Link>
 
@@ -245,10 +245,10 @@ export const Solutions: React.FC = () => {
         </div>
 
         {/* Value Banner */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-amber-200 shadow-lg shadow-amber-500/5 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-orange-200 shadow-lg shadow-orange-500/5 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           <div className="lg:col-span-2 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
-              <Zap className="w-3.5 h-3.5 text-emerald-600" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold">
+              <Zap className="w-3.5 h-3.5 text-brand-500" />
               <span>Garantie Sans Application</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -261,7 +261,7 @@ export const Solutions: React.FC = () => {
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
             <Link
               to="/portfolio-exemple"
-              className="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-amber-500/20 transition-all text-center"
+              className="w-full py-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-orange-500/20 transition-all text-center"
             >
               <Eye className="w-4 h-4" />
               <span>Tester le simulateur 8 secteurs</span>

@@ -9,8 +9,8 @@ export const About: React.FC = () => {
         
         {/* Header */}
         <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-800 text-xs font-bold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-orange-600" />
             <span>Notre Histoire & Vision au Maroc</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -25,7 +25,7 @@ export const About: React.FC = () => {
         {/* 3 Value Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4 text-center">
-            <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 text-amber-600 mx-auto flex items-center justify-center">
+            <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-200 text-orange-600 mx-auto flex items-center justify-center">
               <Award className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">Excellence & Prestige</h3>
@@ -35,7 +35,7 @@ export const About: React.FC = () => {
           </div>
 
           <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4 text-center">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 mx-auto flex items-center justify-center">
+            <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 text-amber-600 mx-auto flex items-center justify-center">
               <ShieldCheck className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">Service Clé-en-main</h3>
@@ -56,7 +56,7 @@ export const About: React.FC = () => {
         </div>
 
         {/* CTA */}
-        <div className="bg-white p-8 sm:p-12 rounded-3xl border border-amber-200 shadow-xl shadow-amber-500/5 text-center space-y-6">
+        <div className="bg-white p-8 sm:p-12 rounded-3xl border border-orange-200 shadow-xl shadow-orange-500/5 text-center space-y-6">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Rejoignez la Révolution Digitale</h3>
           <p className="text-sm text-slate-600 max-w-xl mx-auto">
             Plus de 850 professionnels au Maroc ont déjà adopté NFcard pour doubler leurs contacts utiles.
@@ -64,7 +64,7 @@ export const About: React.FC = () => {
           <div className="flex justify-center">
             <Link
               to="/commander"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-sm shadow-md shadow-amber-500/20 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-sm shadow-md shadow-orange-500/20 transition-all"
             >
               <span>Commander ma carte NFC</span>
               <ArrowRight className="w-4 h-4" />

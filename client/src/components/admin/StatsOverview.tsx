@@ -162,12 +162,12 @@ export const StatsOverview: React.FC<StatsOverviewProps> = ({ stats, onNavigateT
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-emerald-50/80 via-white to-emerald-50/30 p-6 rounded-3xl border border-emerald-200 shadow-xs flex items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shadow-md shadow-emerald-600/20 flex-shrink-0">
+        <div className="bg-gradient-to-br from-orange-50/80 via-white to-orange-50/30 p-6 rounded-3xl border border-orange-200 shadow-xs flex items-center gap-4">
+          <div className="w-14 h-14 rounded-2xl bg-brand-500 text-white flex items-center justify-center shadow-md shadow-orange-500/20 flex-shrink-0">
             <TrendingUp className="w-7 h-7" />
           </div>
           <div className="min-w-0">
-            <span className="text-[11px] text-emerald-800 font-bold uppercase tracking-wider block">
+            <span className="text-[11px] text-orange-800 font-bold uppercase tracking-wider block">
               Secteur d'Activité Leader
             </span>
             <h3 className="text-base font-extrabold text-slate-900 mt-0.5 truncate">{stats.popularCategory}</h3>
