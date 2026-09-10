@@ -48,7 +48,7 @@ app.use("/api/upload", uploadsRouter);
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
-    company: "Tektap NFC Maroc",
+    company: "NFcard Maroc",
     timestamp: new Date().toISOString(),
     version: "1.0.0"
   });

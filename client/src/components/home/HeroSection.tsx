@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { ShoppingBag, Play, CheckCircle, Zap, Smartphone, QrCode, ArrowDown } from 'lucide-react';
@@ -204,7 +204,7 @@ export const HeroSection: React.FC = () => {
               </div>
 
               <div className="relative z-10">
-                <p className="text-white/80 text-[10px] font-extrabold tracking-widest mb-1.5">TEKTAP NFC MAROC</p>
+                <p className="text-white/80 text-[10px] font-extrabold tracking-widest mb-1.5">NFCARD MAROC</p>
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full bg-white/20 border border-white/30 flex items-center justify-center">
                     <Zap className="w-2.5 h-2.5 text-amber-300" />

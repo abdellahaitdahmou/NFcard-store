@@ -276,7 +276,7 @@ export class DataStore {
     const newProfile: DigitalProfile = {
       id: "prof-" + uuidv4().slice(0, 8),
       slug: generatedSlug,
-      ownerName: orderData.customerInfo.fullName || "Client Tektap",
+      ownerName: orderData.customerInfo.fullName || "Client NFcard",
       companyName: orderData.customerInfo.companyName || "Entreprise",
       jobTitle: orderData.customerInfo.jobTitle || "Professionnel",
       bio: orderData.customerInfo.description || `Bienvenue sur le profil digital officiel de ${orderData.customerInfo.fullName || orderData.customerInfo.companyName}.`,

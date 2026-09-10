@@ -74,12 +74,12 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
           {/* Logo Header */}
           <div className="p-5 border-b border-slate-100 flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white font-black shadow-md shadow-amber-500/20">
-                <Zap className="w-4 h-4" />
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center p-1 shadow-md shadow-amber-500/20">
+                <img src="/logo-icon.png" alt="NFcard Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="font-extrabold text-slate-900 text-base tracking-tight block leading-tight">
-                  TEKTAP<span className="text-amber-600">.</span>MA
+                  NFCARD<span className="text-amber-600">.</span>MA
                 </span>
                 <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
                   Admin Panel
@@ -133,8 +133,8 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
         <div className="p-4 border-t border-slate-100 bg-slate-50/60 space-y-2.5">
           <div className="px-3 py-2 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-between">
             <div className="min-w-0 pr-2">
-              <p className="text-xs font-bold text-slate-900 truncate">{user?.name || "Directeur Tektap"}</p>
-              <p className="text-[10px] text-slate-500 truncate">{user?.email || "admin@tektap.ma"}</p>
+              <p className="text-xs font-bold text-slate-900 truncate">{user?.name || "Directeur NFcard"}</p>
+              <p className="text-[10px] text-slate-500 truncate">{user?.email || "admin@nfcard.ma"}</p>
             </div>
             <span className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" title="En ligne" />
           </div>

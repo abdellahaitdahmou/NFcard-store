@@ -273,7 +273,7 @@ export const InteractiveNfcDemo: React.FC = () => {
                 {/* Footer bar */}
                 <div className="p-3 bg-slate-900 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400">
                   <span className="flex items-center gap-1 font-semibold text-white">
-                    <Zap className="w-3 h-3 text-emerald-400" /> Powered by Tektap Maroc
+                    <Zap className="w-3 h-3 text-amber-400" /> Powered by NFcard Maroc
                   </span>
                   <span>🇲🇦 NFC Pro</span>
                 </div>

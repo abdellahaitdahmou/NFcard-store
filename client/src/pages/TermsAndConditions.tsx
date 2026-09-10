@@ -11,7 +11,7 @@ export const TermsAndConditions: React.FC = () => {
             <span>Conditions de Vente au Maroc</span>
           </div>
           <h1 className="text-3xl font-extrabold text-slate-900">Conditions Générales de Vente</h1>
-          <p className="text-xs text-slate-500">Applicables au Royaume du Maroc - Tektap NFC</p>
+          <p className="text-xs text-slate-500">Applicables au Royaume du Maroc - NFcard Maroc (NFcard.ma)</p>
         </div>
 
         <div className="space-y-6 text-sm text-slate-600 leading-relaxed">

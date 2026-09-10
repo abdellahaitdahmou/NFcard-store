@@ -59,14 +59,14 @@ export const Footer: React.FC = () => {
           >
             <Link to="/" className="inline-flex items-center gap-2.5 group">
               <motion.div
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-md shadow-emerald-500/20"
+                className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-md p-1.5"
                 whileHover={{ scale: 1.1, rotate: -5 }}
               >
-                <Zap className="w-5 h-5 text-white" />
+                <img src="/logo-icon.png" alt="NFcard Logo" className="w-full h-full object-contain" />
               </motion.div>
-              <span className="font-extrabold text-slate-900 text-2xl tracking-tight">
-                Tek<span className="text-emerald-600">tap</span>
-                <span className="text-xs text-amber-600 font-bold ml-2 uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200">Maroc</span>
+              <span className="font-extrabold text-slate-900 text-2xl tracking-tight flex items-center">
+                NF<span className="text-amber-600">card</span>
+                <span className="text-[10px] text-amber-700 font-bold ml-1.5 uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200">.ma</span>
               </span>
             </Link>
 
@@ -152,7 +152,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom bar centered */}
         <div className="mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-slate-200 flex flex-col items-center justify-center gap-3 text-xs text-slate-500 text-center pb-16 md:pb-0">
-          <p>© 2026 Tektap NFC Maroc. Tous droits réservés. Conforme CNDP loi 09-08.</p>
+          <p>© 2026 NFcard Maroc (NFcard.ma). Tous droits réservés. Conforme CNDP loi 09-08.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 pt-1">
             <Link to="/politique-confidentialite" className="hover:text-amber-600 transition-colors">Confidentialité</Link>
             <Link to="/conditions-generales" className="hover:text-amber-600 transition-colors">Conditions Générales</Link>

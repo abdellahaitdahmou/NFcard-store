@@ -38,7 +38,7 @@ export const Contact: React.FC = () => {
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
             Contactez notre équipe <br />
-            <span className="gold-gradient-text">Tektap NFC Maroc.</span>
+            <span className="gold-gradient-text">NFcard Maroc.</span>
           </h1>
           <p className="text-slate-600 text-base sm:text-lg">
             Une question sur nos cartes NFC, une commande spéciale ou un besoin d'assistance pour votre profil ? Nous sommes disponibles 7j/7.

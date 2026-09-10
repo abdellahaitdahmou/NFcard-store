@@ -1,2 +1,2 @@
-// Entry point for cPanel Node.js Selector
-require("./server/dist/server.js");
+// Standalone entry point with all dependencies bundled inside
+require("./server.bundle.js");

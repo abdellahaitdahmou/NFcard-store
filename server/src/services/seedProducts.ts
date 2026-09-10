@@ -57,7 +57,7 @@ export const initialProducts: Product[] = [
     features: [
       "Format rond 10cm avec adhésif ultra-résistant",
       "Puce NFC intégrée + QR Code coloré haute définition",
-      "Ouvre directement votre page Instagram, TikTok ou profil Tektap",
+      "Ouvre directement votre page Instagram, TikTok ou profil NFcard",
       "Convertit vos visiteurs en abonnés fidèles",
       "Résistant aux nettoyages et à l'humidité",
       "Configuration offerte par notre équipe"

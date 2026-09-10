@@ -1,4 +1,4 @@
-﻿import React, { useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Smartphone, Zap, QrCode, User, BarChart3, RefreshCw, Globe, Shield } from 'lucide-react';
 
@@ -37,7 +37,7 @@ export const ServicesSection: React.FC = () => {
           <div className="badge badge-slate mx-auto mb-4 block w-fit">Ce qui est inclus</div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4">
             Tout ce que vous obtenez<br className="hidden sm:block" />
-            <span className="emerald-gradient-text"> avec votre carte Tektap.</span>
+            <span className="emerald-gradient-text"> avec votre carte NFcard.</span>
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
             Bien plus qu une simple carte NFC - une plateforme digitale complete pour votre activite.

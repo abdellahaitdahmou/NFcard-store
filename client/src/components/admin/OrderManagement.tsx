@@ -189,7 +189,7 @@ export const OrderManagement: React.FC<OrderManagementProps> = ({ orders, onRefr
                       <td className="px-5 py-4 text-right space-x-2">
                         {order.customerInfo.phone && (
                           <a
-                            href={`https://wa.me/${order.customerInfo.phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Bonjour ${order.customerInfo.fullName}, nous préparons votre commande ${order.orderNumber} sur Tektap Maroc :`)}`}
+                            href={`https://wa.me/${order.customerInfo.phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Bonjour ${order.customerInfo.fullName}, nous préparons votre commande ${order.orderNumber} sur NFcard Maroc :`)}`}
                             target="_blank"
                             rel="noreferrer"
                             className="p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 inline-flex items-center gap-1 border border-emerald-200 transition-colors shadow-xs"

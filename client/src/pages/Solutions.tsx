@@ -182,7 +182,7 @@ export const Solutions: React.FC = () => {
             <span className="gold-gradient-text">votre secteur d'activité.</span>
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            Chaque profession a ses spécificités. Tektap adapte votre carte NFC et votre profil digital avec les widgets et fonctionnalités essentiels à votre activité.
+            Chaque profession a ses spécificités. NFcard adapte votre carte NFC et votre profil digital avec les widgets et fonctionnalités essentiels à votre activité.
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Phone, Mail, Globe, MessageCircle, Instagram, Facebook, Linkedin,
@@ -107,10 +107,10 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
             animate={{ backgroundPosition: ['0% 0%', '100% 100%'] }}
             transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
           />
-          {/* Top Tektap badge */}
+          {/* Top NFcard badge */}
           <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-sm border border-white/30">
             <Zap className="w-3 h-3 text-white" />
-            <span className="text-white text-[10px] font-bold tracking-wider">TEKTAP NFC</span>
+            <span className="text-white text-[10px] font-bold tracking-wider">NFCARD</span>
           </div>
 
           {/* Share button */}
@@ -173,7 +173,7 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
         <motion.div className="px-5 space-y-2.5 mb-5" {...fadeUp(0.18)}>
           {profile.whatsapp && (
             <SocialBtn
-              href={`https://wa.me/${profile.whatsapp.replace(/\D/g, "")}?text=Bonjour, j'ai scanné votre carte NFC Tektap.`}
+              href={`https://wa.me/${profile.whatsapp.replace(/\D/g, "")}?text=Bonjour, j'ai scanné votre carte NFC NFcard.`}
               icon={<MessageCircle className="w-5 h-5" />}
               label={`WhatsApp — ${profile.whatsapp}`}
               color="bg-[#25D366] hover:bg-[#1da851] shadow-md shadow-green-500/20"
@@ -333,11 +333,11 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
           </motion.div>
         )}
 
-        {/* ── POWERED BY TEKTAP ── */}
+        {/* ── POWERED BY NFCARD ── */}
         <motion.div className="px-5 mt-4" {...fadeUp(0.5)}>
           <div className="flex items-center justify-center gap-2 py-3 text-center text-gray-400 text-xs">
-            <Zap className="w-3.5 h-3.5 text-emerald-500" />
-            <span>Propulsé par <a href="/" className="font-bold text-emerald-600 hover:underline">Tektap NFC Maroc</a></span>
+            <Zap className="w-3.5 h-3.5 text-amber-500" />
+            <span>Propulsé par <a href="/" className="font-bold text-amber-600 hover:underline">NFcard Maroc (NFcard.ma)</a></span>
           </div>
         </motion.div>
 

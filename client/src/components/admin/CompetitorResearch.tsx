@@ -176,7 +176,7 @@ export const CompetitorResearch: React.FC = () => {
                 <th className="px-5 py-4">Fourchette Prix (DH)</th>
                 <th className="px-5 py-4">Public Cible</th>
                 <th className="px-5 py-4">Points Forts</th>
-                <th className="px-5 py-4">Faiblesses & Opportunités Tektap</th>
+                <th className="px-5 py-4">Faiblesses & Opportunités NFcard</th>
                 <th className="px-5 py-4 text-right">Actions</th>
               </tr>
             </thead>
@@ -349,7 +349,7 @@ export const CompetitorResearch: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-red-600 font-bold mb-1">Faiblesses & Opportunités pour Tektap</label>
+                  <label className="block text-red-600 font-bold mb-1">Faiblesses & Opportunités pour NFcard</label>
                   <textarea
                     rows={2}
                     value={formData.weaknesses}

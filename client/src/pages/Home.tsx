@@ -1,4 +1,4 @@
-﻿import React, { useRef } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { HeroSection } from "../components/home/HeroSection";
 import { InteractiveNfcDemo } from "../components/home/InteractiveNfcDemo";
@@ -12,9 +12,9 @@ import { motion, useInView } from "framer-motion";
 import { Star, ShoppingBag, MessageCircle, CheckCircle, Zap } from "lucide-react";
 
 const reviews = [
-  { name: "Youssef El Amrani", role: "Directeur Agence Immobiliere", city: "Marrakech", rating: 5, text: "Nos agents utilisent Tektap depuis 3 mois. Les clients adorent scanner la carte en visite et retrouver tous nos biens directement sur leur telephone." },
+  { name: "Youssef El Amrani", role: "Directeur Agence Immobiliere", city: "Marrakech", rating: 5, text: "Nos agents utilisent NFcard depuis 3 mois. Les clients adorent scanner la carte en visite et retrouver tous nos biens directement sur leur telephone." },
   { name: "Chef Nabil Bennani", role: "Proprietaire de Restaurant",   city: "Casablanca", rating: 5, text: "Menu numerique, reservations WhatsApp, avis Google — tout en un seul tap. Le pack Restaurant a change la facon dont nos clients interagissent avec nous." },
-  { name: "Kenza Tazi",         role: "Architecte d Interieur",       city: "Rabat",      rating: 5, text: "J avais une ancienne carte papier. Tektap a tout cree en 24h a partir d une simple photo. Le resultat est ultra professionnel." },
+  { name: "Kenza Tazi",         role: "Architecte d Interieur",       city: "Rabat",      rating: 5, text: "J avais une ancienne carte papier. NFcard a tout cree en 24h a partir d une simple photo. Le resultat est ultra professionnel." },
 ];
 
 function ReviewCard({ r, i }: { r: typeof reviews[0]; i: number }) {
@@ -76,7 +76,7 @@ export const Home: React.FC = () => {
               Avis clients verifies
             </div>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-              Ils font confiance a <span className="emerald-gradient-text">Tektap</span>
+              Ils font confiance a <span className="emerald-gradient-text">NFcard</span>
             </h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto">Plus de 850 professionnels equipees dans tout le Maroc.</p>
           </motion.div>
@@ -129,7 +129,7 @@ export const Home: React.FC = () => {
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.97 }}>
-              <button onClick={() => openWhatsAppChat("Bonjour, je souhaite commander une carte NFC Tektap.")} className="btn-whatsapp btn-shimmer flex items-center gap-2 rounded-2xl px-8 py-4 text-base font-bold">
+              <button onClick={() => openWhatsAppChat("Bonjour, je souhaite commander une carte NFC NFcard.")} className="btn-whatsapp btn-shimmer flex items-center gap-2 rounded-2xl px-8 py-4 text-base font-bold">
                 <MessageCircle className="w-5 h-5" />
                 Commander via WhatsApp
               </button>

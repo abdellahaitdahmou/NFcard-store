@@ -8,7 +8,7 @@ export const FaqPage: React.FC = () => {
 
   const faqItems = [
     {
-      q: "Comment fonctionne une carte de visite NFC Tektap ?",
+      q: "Comment fonctionne une carte de visite NFC NFcard ?",
       a: "La carte contient une puce NFC intégrée. Lorsque vous approchez votre carte du haut d'un iPhone ou du dos d'un smartphone Android, une notification s'affiche automatiquement sans aucune application à installer, ouvrant votre profil digital complet."
     },
     {
@@ -45,7 +45,7 @@ export const FaqPage: React.FC = () => {
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
             Tout ce que vous devez savoir sur <br />
-            <span className="gold-gradient-text">les Cartes NFC Tektap.</span>
+            <span className="gold-gradient-text">les Cartes NFC NFcard.</span>
           </h1>
           <p className="text-slate-600 text-base sm:text-lg">
             Retrouvez les réponses aux questions les plus fréquemment posées par les professionnels au Maroc.
@@ -73,7 +73,7 @@ export const FaqPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <button
-              onClick={() => openWhatsAppChat("Bonjour, j'ai une question concernant les cartes NFC Tektap.")}
+              onClick={() => openWhatsAppChat("Bonjour, j'ai une question concernant les cartes NFC NFcard.")}
               className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all"
             >
               <MessageCircle className="w-4 h-4" />

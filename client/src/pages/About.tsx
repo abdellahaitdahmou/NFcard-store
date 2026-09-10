@@ -18,7 +18,7 @@ export const About: React.FC = () => {
             <span className="gold-gradient-text">au Royaume du Maroc.</span>
           </h1>
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Tektap NFC Maroc a été fondée avec une mission claire : aider les commerçants, professionnels et entreprises marocaines à passer du papier jetable à une identité digitale prestigieuse, interactive et durable.
+            NFcard Maroc a été fondée avec une mission claire : aider les commerçants, professionnels et entreprises marocaines à passer du papier jetable à une identité digitale prestigieuse, interactive et durable.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export const About: React.FC = () => {
         <div className="bg-white p-8 sm:p-12 rounded-3xl border border-amber-200 shadow-xl shadow-amber-500/5 text-center space-y-6">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Rejoignez la Révolution Digitale</h3>
           <p className="text-sm text-slate-600 max-w-xl mx-auto">
-            Plus de 850 professionnels au Maroc ont déjà adopté Tektap pour doubler leurs contacts utiles.
+            Plus de 850 professionnels au Maroc ont déjà adopté NFcard pour doubler leurs contacts utiles.
           </p>
           <div className="flex justify-center">
             <Link

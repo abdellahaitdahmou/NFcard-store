@@ -18,7 +18,7 @@ export const HowItWorksPage: React.FC = () => {
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
             Comment fonctionne <br />
-            <span className="gold-gradient-text">votre Carte NFC Tektap ?</span>
+            <span className="gold-gradient-text">votre Carte NFC NFcard ?</span>
           </h1>
           <p className="text-slate-600 text-base sm:text-lg">
             De votre commande jusqu'à votre première rencontre professionnelle, découvrez chaque étape du fonctionnement.

@@ -12,9 +12,9 @@ interface SettingsContextType {
 const defaultSettings: SiteSettings = {
   whatsappNumber: "+212661234567",
   whatsappDisplay: "+212 6 61 23 45 67",
-  supportEmail: "contact@tektap.ma",
+  supportEmail: "contact@nfcard.ma",
   supportPhone: "+212 5 22 00 11 22",
-  companyName: "Tektap NFC Maroc",
+  companyName: "NFcard Maroc",
   tagline: "La 1ère Solution de Cartes de Visite NFC & Profils Digitaux au Maroc",
   currency: "DH",
   deliveryFee: 35,
@@ -22,10 +22,10 @@ const defaultSettings: SiteSettings = {
   announcementText: "🚀 Livraison Gratuite partout au Maroc à partir de 500 DH d'achat ! Délais 24h/48h.",
   announcementActive: true,
   socialLinks: {
-    instagram: "https://instagram.com/tektap.maroc",
-    facebook: "https://facebook.com/tektap.maroc",
-    linkedin: "https://linkedin.com/company/tektap-maroc",
-    tiktok: "https://tiktok.com/@tektap.maroc"
+    instagram: "https://instagram.com/nfcard.ma",
+    facebook: "https://facebook.com/nfcard.ma",
+    linkedin: "https://linkedin.com/company/nfcard-maroc",
+    tiktok: "https://tiktok.com/@nfcard.ma"
   }
 };
 
@@ -59,7 +59,7 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   const openWhatsAppChat = (customMessage?: string) => {
     const rawNumber = settings.whatsappNumber.replace(/[^0-9]/g, "");
-    const text = customMessage || "Bonjour Tektap Maroc, je souhaite avoir plus d'informations sur vos cartes de visite NFC et profils digitaux.";
+    const text = customMessage || "Bonjour NFcard Maroc, je souhaite avoir plus d'informations sur vos cartes de visite NFC et profils digitaux.";
     const url = `https://wa.me/${rawNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };

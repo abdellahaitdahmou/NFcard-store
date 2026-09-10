@@ -142,7 +142,7 @@ export const QuickOrderModal: React.FC<QuickOrderModalProps> = ({
   };
 
   const handleWhatsAppOrder = () => {
-    const text = `Bonjour Tektap Maroc !\nJe souhaite commander : *${item.name}* (Qté: ${quantity})\nTotal : *${finalTotal} DH* (Paiement à la livraison)\nNom : ${fullName || "[À préciser]"}\nTéléphone : ${phone || "[À préciser]"}\nVille : ${city}\nAdresse : ${address || "[À préciser]"}`;
+    const text = `Bonjour NFcard Maroc !\nJe souhaite commander : *${item.name}* (Qté: ${quantity})\nTotal : *${finalTotal} DH* (Paiement à la livraison)\nNom : ${fullName || "[À préciser]"}\nTéléphone : ${phone || "[À préciser]"}\nVille : ${city}\nAdresse : ${address || "[À préciser]"}`;
     openWhatsAppChat(text);
   };
 

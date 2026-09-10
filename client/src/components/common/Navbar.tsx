@@ -39,16 +39,15 @@ export const Navbar: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
 
-              <Link to="/" className="flex items-center gap-2 group">
-                <motion.div
-                  className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-md shadow-emerald-500/30"
-                  whileHover={{ scale: 1.12, rotate: -6 }}
-                  whileTap={{ scale: 0.93 }}
-                >
-                  <Zap className="w-4 h-4 text-white" />
-                </motion.div>
-                <span className="font-extrabold text-gray-900 text-lg tracking-tight">
-                  Tek<span className="text-emerald-600">tap</span>
+              <Link to="/" className="flex items-center gap-2.5 group">
+                <img
+                  src="/logo.png"
+                  alt="NFcard Logo"
+                  className="w-9 h-9 object-contain transition-transform group-hover:scale-105"
+                />
+                <span className="font-extrabold text-gray-900 text-xl tracking-tight">
+                  NF<span className="text-orange-500">card</span>
+                  <span className="text-[11px] font-bold text-slate-400 ml-1">.ma</span>
                 </span>
               </Link>
 
@@ -105,9 +104,9 @@ export const Navbar: React.FC = () => {
           <>
             <motion.div className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setMobileOpen(false)} />
             <motion.div className="fixed top-0 left-0 bottom-0 z-50 w-72 max-w-[85vw] bg-white shadow-2xl flex flex-col p-6 gap-2 overflow-y-auto" initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }} transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
-              <div className="flex items-center gap-2 mb-6 pt-2">
-                <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-sm"><Zap className="w-4 h-4 text-white" /></div>
-                <span className="font-extrabold text-lg">Tek<span className="text-emerald-600">tap</span></span>
+              <div className="flex items-center gap-2.5 mb-6 pt-2">
+                <img src="/logo.png" alt="NFcard Logo" className="w-8 h-8 object-contain" />
+                <span className="font-extrabold text-xl">NF<span className="text-orange-500">card</span><span className="text-xs font-bold text-slate-400 ml-1">.ma</span></span>
               </div>
               {navLinks.map((link, i) => (
                 <motion.div key={link.to} initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.05 * i + 0.1 }}>

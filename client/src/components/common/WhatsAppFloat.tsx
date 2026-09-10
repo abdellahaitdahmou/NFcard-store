@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { useSettings } from "../../contexts/SettingsContext";
 import { MessageCircle, X, Sparkles, Send } from "lucide-react";
 
@@ -25,7 +25,7 @@ export const WhatsAppFloat: React.FC = () => {
                 <MessageCircle className="w-5 h-5 text-gray-900" />
               </div>
               <div>
-                <p className="font-bold text-sm text-gray-900">Conseiller Tektap Maroc</p>
+                <p className="font-bold text-sm text-gray-900">Conseiller NFcard Maroc</p>
                 <p className="text-[11px] text-emerald-400 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   En ligne maintenant

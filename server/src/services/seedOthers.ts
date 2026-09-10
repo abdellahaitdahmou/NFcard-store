@@ -12,8 +12,8 @@ import {
 export const initialAdminUsers: AdminUser[] = [
   {
     id: "admin-1",
-    email: "admin@tektap.ma",
-    name: "Directeur Tektap Maroc",
+    email: "admin@nfcard.ma",
+    name: "Directeur NFcard Maroc",
     passwordHash: bcrypt.hashSync("admin123", 10),
     role: "superadmin"
   }
@@ -22,9 +22,9 @@ export const initialAdminUsers: AdminUser[] = [
 export const initialSettings: SiteSettings = {
   whatsappNumber: "+212661234567",
   whatsappDisplay: "+212 6 61 23 45 67",
-  supportEmail: "contact@tektap.ma",
+  supportEmail: "contact@nfcard.ma",
   supportPhone: "+212 5 22 00 11 22",
-  companyName: "Tektap NFC Maroc",
+  companyName: "NFcard Maroc",
   tagline: "La 1ère Solution de Cartes de Visite NFC & Profils Digitaux au Maroc",
   currency: "DH",
   deliveryFee: 35,
@@ -32,10 +32,10 @@ export const initialSettings: SiteSettings = {
   announcementText: "🚀 Livraison Gratuite partout au Maroc à partir de 500 DH d'achat ! Délais 24h/48h.",
   announcementActive: true,
   socialLinks: {
-    instagram: "https://instagram.com/tektap.maroc",
-    facebook: "https://facebook.com/tektap.maroc",
-    linkedin: "https://linkedin.com/company/tektap-maroc",
-    tiktok: "https://tiktok.com/@tektap.maroc"
+    instagram: "https://instagram.com/nfcard.ma",
+    facebook: "https://facebook.com/nfcard.ma",
+    linkedin: "https://linkedin.com/company/nfcard-maroc",
+    tiktok: "https://tiktok.com/@nfcard.ma"
   }
 };
 
@@ -86,7 +86,7 @@ export const initialCompetitors: Competitor[] = [
     targetCustomer: "Cafés, Snacks et Restaurants à Casablanca & Marrakech",
     advantages: "Spécialisé restauration.",
     weaknesses: "Simple PDF non interactif (zoom désagréable sur mobile), pas de commande WhatsApp, abonnement récurrent imposé.",
-    notes: "Opportunité majeure pour Tektap : offrir un vrai menu digital interactif avec commande WhatsApp sans abonnement contraignant.",
+    notes: "Opportunité majeure pour NFcard : offrir un vrai menu digital interactif avec commande WhatsApp sans abonnement contraignant.",
     dateResearched: "2026-02-20",
     isVerified: true
   }

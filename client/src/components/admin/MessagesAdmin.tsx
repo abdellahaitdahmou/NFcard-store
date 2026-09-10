@@ -46,7 +46,7 @@ export const MessagesAdmin: React.FC = () => {
         <div>
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">Messages & Demandes de Devis</h2>
           <p className="text-xs text-slate-500 mt-0.5">
-            Messages reçus depuis le formulaire de contact du site Tektap Maroc.
+            Messages reçus depuis le formulaire de contact du site NFcard Maroc.
           </p>
         </div>
 
@@ -127,7 +127,7 @@ export const MessagesAdmin: React.FC = () => {
 
                 {msg.phone && (
                   <a
-                    href={`https://wa.me/${msg.phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Bonjour ${msg.name}, suite à votre message sur Tektap Maroc concernant "${msg.subject}" :`)}`}
+                    href={`https://wa.me/${msg.phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Bonjour ${msg.name}, suite à votre message sur NFcard Maroc concernant "${msg.subject}" :`)}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-xs"

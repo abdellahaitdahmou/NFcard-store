@@ -57,7 +57,7 @@ export const Products: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-            <span>Catalogue Officiel Tektap NFC Maroc</span>
+            <span>Catalogue Officiel NFcard Maroc</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
             Produits Connectés & Solutions NFC <br />

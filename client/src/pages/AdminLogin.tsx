@@ -4,7 +4,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { Lock, Mail, Zap, ArrowRight, ShieldCheck } from "lucide-react";
 
 export const AdminLogin: React.FC = () => {
-  const [email, setEmail] = useState("admin@tektap.ma");
+  const [email, setEmail] = useState("admin@nfcard.ma");
   const [password, setPassword] = useState("admin123");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -36,10 +36,10 @@ export const AdminLogin: React.FC = () => {
         
         {/* Brand Header */}
         <div className="text-center space-y-2">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-white flex items-center justify-center mx-auto shadow-lg shadow-amber-500/20">
-            <Zap className="w-7 h-7" />
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex items-center justify-center mx-auto shadow-lg shadow-amber-500/20 p-2">
+            <img src="/logo-icon.png" alt="NFcard Logo" className="w-full h-full object-contain" />
           </div>
-          <h1 className="text-2xl font-black text-slate-900 tracking-tight">Administration Tektap</h1>
+          <h1 className="text-2xl font-black text-slate-900 tracking-tight">Administration NFcard</h1>
           <p className="text-xs text-slate-500">
             Gestion des commandes, profils digitaux et inventaire NFC au Maroc.
           </p>
@@ -92,7 +92,7 @@ export const AdminLogin: React.FC = () => {
 
         <div className="pt-2 text-center border-t border-slate-100">
           <p className="text-[11px] text-slate-400">
-            Identifiants démo : <span className="text-slate-700 font-mono font-bold">admin@tektap.ma</span> / <span className="text-slate-700 font-mono font-bold">admin123</span>
+            Identifiants démo : <span className="text-slate-700 font-mono font-bold">admin@nfcard.ma</span> / <span className="text-slate-700 font-mono font-bold">admin123</span>
           </p>
         </div>
 

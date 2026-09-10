@@ -11,14 +11,14 @@ export const PrivacyPolicy: React.FC = () => {
             <span>Conformité Loi 09-08 & CNDP</span>
           </div>
           <h1 className="text-3xl font-extrabold text-slate-900">Politique de Confidentialité</h1>
-          <p className="text-xs text-slate-500">Dernière mise à jour : 2026 - Tektap NFC Maroc</p>
+          <p className="text-xs text-slate-500">Dernière mise à jour : 2026 - NFcard Maroc (NFcard.ma)</p>
         </div>
 
         <div className="space-y-6 text-sm text-slate-600 leading-relaxed">
           <section className="space-y-2">
             <h2 className="text-base font-bold text-slate-900">1. Collecte des Données Personnelles</h2>
             <p>
-              Tektap NFC Maroc collecte uniquement les informations nécessaires au traitement de votre commande (nom, téléphone, adresse de livraison) et à la configuration de votre profil digital public (liens sociaux, coordonnées professionnelles, logo).
+              NFcard Maroc collecte uniquement les informations nécessaires au traitement de votre commande (nom, téléphone, adresse de livraison) et à la configuration de votre profil digital public (liens sociaux, coordonnées professionnelles, logo).
             </p>
           </section>
 

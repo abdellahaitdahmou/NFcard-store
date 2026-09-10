@@ -164,7 +164,7 @@ export const OrderPage: React.FC = () => {
       }
 
       const orderPayload = {
-        productOrPackName: currentItem ? currentItem.name : "Commande Tektap",
+        productOrPackName: currentItem ? currentItem.name : "Commande NFcard",
         productType: selectedType,
         productId: currentItem ? currentItem.id : selectedId,
         quantity,
@@ -204,7 +204,7 @@ export const OrderPage: React.FC = () => {
   };
 
   const handleWhatsAppDirect = () => {
-    const text = `Bonjour Tektap Maroc !\nJe souhaite commander : *${currentItem?.name}* (Qté: ${quantity})\nTotal : *${finalTotal} DH* (Paiement à la livraison)\nNom : ${fullName || "[À préciser]"}\nTéléphone : ${phone || "[À préciser]"}\nVille : ${city}\nAdresse : ${address || "[À préciser]"}`;
+    const text = `Bonjour NFcard Maroc !\nJe souhaite commander : *${currentItem?.name}* (Qté: ${quantity})\nTotal : *${finalTotal} DH* (Paiement à la livraison)\nNom : ${fullName || "[À préciser]"}\nTéléphone : ${phone || "[À préciser]"}\nVille : ${city}\nAdresse : ${address || "[À préciser]"}`;
     openWhatsAppChat(text);
   };
 
