@@ -57,17 +57,13 @@ export const Footer: React.FC = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.15 }}
           >
-            <Link to="/" className="inline-flex items-center gap-3.5 group">
-              <motion.div
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-orange-200 flex items-center justify-center shadow-lg p-2 shadow-orange-500/15"
-                whileHover={{ scale: 1.08, rotate: -3 }}
-              >
-                <img src="/logo.png" alt="NFcard Logo" className="w-full h-full object-contain" />
-              </motion.div>
-              <span className="font-black text-orange-500 text-3xl sm:text-4xl tracking-tight flex items-center">
-                card
-                <span className="text-xs text-orange-800 font-extrabold ml-2 uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-orange-50 border border-orange-200">.MA</span>
-              </span>
+            <Link to="/" className="inline-flex items-center group py-2">
+              <motion.img
+                src="/logo-full.png"
+                alt="NFcard.ma Logo"
+                className="h-12 sm:h-14 w-auto object-contain"
+                whileHover={{ scale: 1.05 }}
+              />
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-md mx-auto text-center">

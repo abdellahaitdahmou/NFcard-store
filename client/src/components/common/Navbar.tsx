@@ -39,16 +39,12 @@ export const Navbar: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-20">
 
-              <Link to="/" className="flex items-center gap-2.5 group">
+              <Link to="/" className="flex items-center group py-1">
                 <img
-                  src="/logo.png"
-                  alt="NFcard Logo"
-                  className="w-12 h-12 sm:w-14 sm:h-14 object-contain transition-transform group-hover:scale-105 filter drop-shadow-sm"
+                  src="/logo-full.png"
+                  alt="NFcard.ma Logo"
+                  className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
                 />
-                <span className="font-black text-orange-500 text-2xl sm:text-[28px] tracking-tight flex items-center">
-                  card
-                  <span className="text-[10px] sm:text-xs font-black text-orange-800 ml-2 uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange-50 border border-orange-200">.MA</span>
-                </span>
               </Link>
 
               <nav className="hidden md:flex items-center gap-1">
@@ -104,12 +100,8 @@ export const Navbar: React.FC = () => {
           <>
             <motion.div className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setMobileOpen(false)} />
             <motion.div className="fixed top-0 left-0 bottom-0 z-50 w-72 max-w-[85vw] bg-white shadow-2xl flex flex-col p-6 gap-2 overflow-y-auto" initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }} transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
-              <div className="flex items-center gap-2.5 mb-6 pt-2">
-                <img src="/logo.png" alt="NFcard Logo" className="w-12 h-12 object-contain" />
-                <span className="font-black text-orange-500 text-2xl flex items-center">
-                  card
-                  <span className="text-[10px] font-black text-orange-800 ml-1.5 uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange-50 border border-orange-200">.MA</span>
-                </span>
+              <div className="flex items-center mb-6 pt-2">
+                <img src="/logo-full.png" alt="NFcard.ma Logo" className="h-10 w-auto object-contain" />
               </div>
               {navLinks.map((link, i) => (
                 <motion.div key={link.to} initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.05 * i + 0.1 }}>
