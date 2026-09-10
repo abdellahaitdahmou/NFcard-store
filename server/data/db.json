@@ -1,0 +1,971 @@
+{
+  "adminUsers": [
+    {
+      "id": "admin-1",
+      "email": "admin@tektap.ma",
+      "name": "Directeur Tektap Maroc",
+      "passwordHash": "$2a$10$Nyntbvmw.zCYrNBlJvb7V.XC6KpVDZZ6YfF.7mD..4jujUrnmLNNO",
+      "role": "superadmin"
+    }
+  ],
+  "settings": {
+    "whatsappNumber": "+212661234567",
+    "whatsappDisplay": "+212 6 61 23 45 67",
+    "supportEmail": "contact@tektap.ma",
+    "supportPhone": "+212 5 22 00 11 22",
+    "companyName": "Tektap NFC Maroc",
+    "tagline": "La 1ère Solution de Cartes de Visite NFC & Profils Digitaux au Maroc",
+    "currency": "DH",
+    "deliveryFee": 35,
+    "freeDeliveryThreshold": 500,
+    "announcementText": "🚀 Livraison Gratuite partout au Maroc à partir de 500 DH d'achat ! Délais 24h/48h.",
+    "announcementActive": true,
+    "socialLinks": {
+      "instagram": "https://instagram.com/tektap.maroc",
+      "facebook": "https://facebook.com/tektap.maroc",
+      "linkedin": "https://linkedin.com/company/tektap-maroc",
+      "tiktok": "https://tiktok.com/@tektap.maroc"
+    }
+  },
+  "products": [
+    {
+      "id": "prod-google-stand",
+      "name": "Chevalet Acrylique NFC Avis Google 5★",
+      "slug": "chevalet-nfc-avis-google-5-etoiles",
+      "tagline": "Multipliez vos avis Google Maps 5 étoiles en caisse et à la réception",
+      "description": "Chevalet de comptoir en acrylique noir de luxe avec logo Google Merchant officiel, puce NFC intégrée et QR Code. Vos clients approchent leur smartphone et déposent un avis 5 étoiles en 3 secondes !",
+      "price": 290,
+      "comparePrice": 390,
+      "features": [
+        "Acrylique noir brillant haute qualité et design statutaire",
+        "Puce NFC pré-programmée avec le lien direct de vos avis Google",
+        "QR Code haute visibilité pour smartphones sans NFC",
+        "Augmente considérablement votre classement sur Google Maps",
+        "Zéro application requise pour vos clients",
+        "Idéal pour restaurants, salons de beauté, hôtels, cliniques et commerces",
+        "Installation immédiate prête à poser"
+      ],
+      "isPopular": true,
+      "category": "stands",
+      "badge": "Spécial Commerces & Resto",
+      "image": "/products/google-stand.png",
+      "includedCardCount": 1
+    },
+    {
+      "id": "prod-table-tents-5",
+      "name": "Pack 5 Chevalets de Table NFC Restaurant (Table 01 à 05)",
+      "slug": "pack-5-chevalets-table-nfc-restaurant",
+      "tagline": "Lot de 5 chevalets numérotés pour menu digital et commandes en terrasse",
+      "description": "Chevalets double-face numérotés Table 01 à 05 pour restaurants, cafés et bars. Permet aux clients de consulter votre menu digital avec photos, prix, allergènes et bouton commande WhatsApp.",
+      "price": 390,
+      "comparePrice": 550,
+      "features": [
+        "Lot complet de 5 chevalets rigides double-face (Tables 1 à 5)",
+        "Puces NFC individuelles + QR Code haute lisibilité par table",
+        "Menu digital interactif avec mise à jour des prix en temps réel",
+        "Bouton commande et réservation WhatsApp direct",
+        "Élimine les coûts d'impression des menus papier",
+        "Résistant aux taches et lavable"
+      ],
+      "isPopular": true,
+      "category": "stands",
+      "badge": "Pack Restauration",
+      "image": "/products/table-tents-5pcs.png",
+      "includedCardCount": 5
+    },
+    {
+      "id": "prod-social-plate",
+      "name": "Plaque Ronde NFC Réseaux Sociaux & Instagram",
+      "slug": "plaque-ronde-nfc-reseaux-sociaux",
+      "tagline": "Gagnez des abonnés Instagram, TikTok & Facebook en direct en boutique",
+      "description": "Disque adhésif rigide avec puce NFC et QR Code multi-réseaux. À coller sur votre comptoir de caisse, votre vitrine de magasin ou votre miroir de salon de coiffure.",
+      "price": 180,
+      "comparePrice": 250,
+      "features": [
+        "Format rond 10cm avec adhésif ultra-résistant",
+        "Puce NFC intégrée + QR Code coloré haute définition",
+        "Ouvre directement votre page Instagram, TikTok ou profil Tektap",
+        "Convertit vos visiteurs en abonnés fidèles",
+        "Résistant aux nettoyages et à l'humidité",
+        "Configuration offerte par notre équipe"
+      ],
+      "isPopular": false,
+      "category": "stands",
+      "badge": "Tendance Boutique",
+      "image": "/products/social-plate.png",
+      "includedCardCount": 1
+    },
+    {
+      "id": "prod-nfc-stickers-10",
+      "name": "Lot de 10 Stickers / Autocollants NFC NTAG215",
+      "slug": "lot-10-stickers-autocollants-nfc-ntag215",
+      "tagline": "Transformez n'importe quelle vitrine, table ou objet en borne interactive",
+      "description": "Lot de 10 autocollants NFC transparents / blancs discrets avec puce NTAG215 (504 Bytes). À coller sur vos vitrines de magasin, tables, véhicules professionnels, packaging ou ordinateurs.",
+      "price": 130,
+      "comparePrice": 220,
+      "features": [
+        "Lot de 10 stickers adhésifs haute adhérence",
+        "Puce NXP NTAG215 504 Bytes réinscriptible",
+        "Détection instantanée sans contact NFC",
+        "Idéal pour automatiser des liens, avis ou profils digitaux",
+        "Programmable avec smartphone iPhone ou Android",
+        "Compatible toutes applications NFC"
+      ],
+      "isPopular": false,
+      "category": "accessories",
+      "badge": "Lot de 10",
+      "image": "/products/nfc-stickers-10pcs.png",
+      "includedCardCount": 10
+    },
+    {
+      "id": "prod-wristbands-4",
+      "name": "Bracelet NFC Tissé Ajustable Événements & Hôtels",
+      "slug": "bracelet-nfc-tisse-ajustable",
+      "tagline": "Bracelet connecté pour accès VIP, hôtels, piscines, clubs & festivals",
+      "description": "Bracelet tissé ultra-confortable et indéchirable avec puce NFC étanche intégrée. Idéal pour gestion d'accès VIP, résidences hôtelières, événements privés ou partage de contact sans contact.",
+      "price": 100,
+      "comparePrice": 150,
+      "features": [
+        "Bracelet tissé individuel avec bague de serrage sécurisée",
+        "Puce NFC étanche (résistant à l'eau et à la transpiration)",
+        "Lien programmable vers profil, contact, catalogue ou badge d'accès",
+        "Finition noire sobre et élégante",
+        "Réutilisable et durable"
+      ],
+      "isPopular": false,
+      "category": "accessories",
+      "badge": "À l'unité",
+      "image": "/products/nfc-wristbands.png",
+      "includedCardCount": 1
+    },
+    {
+      "id": "prod-rfid-duplicator",
+      "name": "Copieur / Duplicateur de Badges RFID 125Khz + 6 Porte-clés",
+      "slug": "copieur-duplicateur-badges-rfid-125khz",
+      "tagline": "Dupliquez vos badges d'immeuble, parking et ascenseur en 1 seconde",
+      "description": "Appareil duplicateur autonome ergonomique avec synthèse vocale et LED indicatrices. Permet de lire et cloner tous les badges et porte-clés RFID 125Khz (EM4100 / TK4100 / T5577) sans ordinateur en 1 seul clic !",
+      "price": 450,
+      "comparePrice": 650,
+      "features": [
+        "Appareil copieur RFID 125Khz portable avec poignée ergonomique",
+        "Livré avec 6 porte-clés RFID réinscriptibles bleus inclus",
+        "Clonage instantané (Bouton READ puis WRITE)",
+        "Synthèse vocale bilingue et alertes sonores de confirmation",
+        "Compatible interphones, barrières de parking, ascenseurs et portes d'immeuble au Maroc",
+        "Fonctionne avec 2 piles AAA standards",
+        "Prêt à l'emploi avec notice en français"
+      ],
+      "isPopular": true,
+      "category": "rfid",
+      "badge": "Kit Complet Pro",
+      "image": "/products/rfid-duplicator.png",
+      "includedCardCount": 6
+    },
+    {
+      "id": "prod-keyfobs-15",
+      "name": "Lot de 15 Porte-clés / Badges RFID 125Khz Universels",
+      "slug": "lot-15-porte-cles-badges-rfid-125khz",
+      "tagline": "Badges porte-clés bleus étanches et résistants pour contrôle d'accès",
+      "description": "Lot de 15 porte-clés RFID 125Khz avec puce EM4100/TK4100 universelle pré-numérotée. Parfait pour les résidences, syndics de copropriété, bureaux, parkings et clubs sportifs.",
+      "price": 180,
+      "comparePrice": 260,
+      "features": [
+        "Lot économique de 15 porte-clés RFID bleus",
+        "Boîtier ABS étanche et résistant aux chocs",
+        "Fréquence 125Khz universelle standard",
+        "Numéro ID unique gravé au laser sur chaque porte-clés",
+        "Anneau métallique porte-clés inclus",
+        "Compatible tous lecteurs RFID standards au Maroc"
+      ],
+      "isPopular": false,
+      "category": "rfid",
+      "badge": "Lot de 15",
+      "image": "/products/rfid-keyfobs-15pcs.png",
+      "includedCardCount": 15
+    }
+  ],
+  "packages": [
+    {
+      "id": "pack-restaurant-booster",
+      "name": "Pack Restaurant & Café Booster",
+      "slug": "pack-restaurant-booster",
+      "businessType": "restaurant",
+      "tagline": "L'équipement complet : Avis Google + Menu Digital + 5 Chevalets de Table",
+      "description": "La solution clé-en-main ultime pour booster votre restaurant, café ou lounge : récoltez des centaines d'avis 5 étoiles et modernisez votre service en terrasse.",
+      "price": 690,
+      "comparePrice": 930,
+      "features": [
+        "1x Chevalet Acrylique Luxe Avis Google 5★ (Comptoir / Caisse)",
+        "5x Chevalets de Table Numérotés NFC & QR Code (Table 01 à 05)",
+        "1x Carte NFC Noir Mat Luxe pour le Gérant / Responsable",
+        "Menu Digital Interactif avec photos, prix et mise à jour instantanée",
+        "Bouton réservation de table et commande directe WhatsApp",
+        "Configuration complète et expédition gratuite partout au Maroc"
+      ],
+      "badge": "Pack N°1 Restauration",
+      "isPopular": true,
+      "icon": "Utensils",
+      "idealFor": "Restaurants, Cafés & Terasses"
+    },
+    {
+      "id": "pack-commerce-beaute",
+      "name": "Pack Commerce, Beauté & Salons",
+      "slug": "pack-commerce-beaute",
+      "businessType": "salon_barber",
+      "tagline": "Multipliez vos avis Google et vos abonnés Instagram en caisse",
+      "description": "Idéal pour les instituts de beauté, salons de coiffure, spas, boutiques et showrooms. Transformez chaque cliente en ambassadrice digitale.",
+      "price": 490,
+      "comparePrice": 670,
+      "features": [
+        "1x Chevalet Acrylique Luxe Avis Google 5★ de caisse",
+        "1x Plaque Ronde Réseaux Sociaux (Instagram / TikTok) pour miroir ou vitrine",
+        "1x Carte NFC Blanche Pure ou Noir Mat Personnalisée",
+        "Profil Digital avec catalogue des soins & prise de RDV WhatsApp",
+        "Accompagnement design et intégration de votre charte"
+      ],
+      "badge": "Idéal Salons & Boutiques",
+      "isPopular": true,
+      "icon": "Scissors",
+      "idealFor": "Instituts de beauté, Spas & Salons"
+    },
+    {
+      "id": "pack-syndic-rfid",
+      "name": "Pack Syndic, Résidence & Sécurité RFID",
+      "slug": "pack-syndic-rfid",
+      "businessType": "company",
+      "tagline": "Kit complet de duplication de badges pour immeubles, parkings et bureaux",
+      "description": "Équipez votre copropriété, résidence ou entreprise d'un système autonome pour dupliquer et gérer les accès résidents et visiteurs sans dépendre d'un prestataire externe.",
+      "price": 590,
+      "comparePrice": 810,
+      "features": [
+        "1x Copieur / Duplicateur RFID 125Khz Portatif avec synthèse vocale",
+        "15x Badges Porte-clés RFID 125Khz Universels bleus",
+        "6x Porte-clés Réinscriptibles réutilisables",
+        "Clonage 1-seconde sans ordinateur",
+        "Notice complète en français + piles incluses"
+      ],
+      "badge": "Syndics & Entreprises",
+      "isPopular": false,
+      "icon": "Shield",
+      "idealFor": "Syndics, Résidences & Bureaux"
+    },
+    {
+      "id": "pack-pro-elite",
+      "name": "Pack Dirigeant & Professionnel Élite",
+      "slug": "pack-pro-elite",
+      "businessType": "freelancer",
+      "tagline": "L'arsenal sans contact pour consultants, agents immobiliers et dirigeants",
+      "description": "Combinez carte de visite prestige, plaque de bureau et stickers discrets pour connecter tous vos supports professionnels.",
+      "price": 390,
+      "comparePrice": 540,
+      "features": [
+        "1x Carte NFC Noir Mat Satiné Prestige NTAG215",
+        "1x Plaque Ronde Réseaux Sociaux & Contact pour bureau",
+        "3x Stickers NFC NTAG215 pour ordinateur portable / voiture",
+        "Mini-Site Portfolio Pro avec QR Code dynamique",
+        "Téléchargement de contact vCard instantané 1-tap"
+      ],
+      "badge": "Prestige",
+      "isPopular": false,
+      "icon": "Briefcase",
+      "idealFor": "Consultants, Dirigeants & Agents Immo"
+    },
+    {
+      "id": "pack-evenement-vip",
+      "name": "Pack Événements & Accès VIP",
+      "slug": "pack-evenement-vip",
+      "businessType": "custom",
+      "tagline": "Bracelets et stickers connectés pour festivals, soirées privées et hôtels",
+      "description": "Une expérience 100% connectée pour vos invités VIP, événements d'entreprise ou résidences hôtelières.",
+      "price": 350,
+      "comparePrice": 480,
+      "features": [
+        "4x Bracelets NFC Tissés avec puce étanche et bague de serrage",
+        "5x Stickers NFC NTAG215 pour affiches, badges et comptoirs",
+        "Redirection dynamique vers programme, billetterie ou profil VIP",
+        "Réutilisable et durable"
+      ],
+      "badge": "Événementiel",
+      "isPopular": false,
+      "icon": "Sparkles",
+      "idealFor": "Festivals, Hôtels & Soirées VIP"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "prof-ahmed",
+      "slug": "ahmed-benali",
+      "ownerName": "Ahmed Benali",
+      "companyName": "Atlas Prestige Real Estate",
+      "jobTitle": "Consultant en Immobilier de Prestige",
+      "bio": "Spécialiste de l'immobilier haut de gamme à Marrakech et Casablanca. J'accompagne investisseurs et particuliers dans l'achat, la vente et la location de propriétés d'exception.",
+      "category": "Immobilier",
+      "avatarUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80",
+      "logoUrl": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&auto=format&fit=crop&q=80",
+      "theme": "luxury_gold",
+      "phone": "+212661234567",
+      "whatsapp": "+212661234567",
+      "email": "ahmed.benali@atlasprestige.ma",
+      "website": "https://atlasprestige.ma",
+      "address": "Angle Boulevard Mohammed V et Rue de la Liberté, Guéliz",
+      "city": "Marrakech",
+      "googleMapsUrl": "https://maps.google.com/?q=Gueliz+Marrakech",
+      "socials": {
+        "instagram": "https://instagram.com/ahmed.benali.immo",
+        "linkedin": "https://linkedin.com/in/ahmed-benali-immo",
+        "facebook": "https://facebook.com/atlasprestige.maroc"
+      },
+      "services": [
+        {
+          "id": "serv-1",
+          "title": "Achat & Vente de Villas de Luxe",
+          "description": "Propriétés sélectionnées sur la Palmeraie, Route d'Amizmiz et l'Hivernage avec rentabilité locative.",
+          "price": "Sur Mandat"
+        },
+        {
+          "id": "serv-2",
+          "title": "Estimation Immobilière Certifiée",
+          "description": "Évaluation précise de la valeur marchande de votre bien au mètre carré selon les tendances du marché.",
+          "price": "Offerte"
+        },
+        {
+          "id": "serv-3",
+          "title": "Accompagnement Notarié & Juridique",
+          "description": "Gestion complète du dossier d'acquisition, vérification du titre foncier et formalités administratives.",
+          "price": "Inclus"
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "port-1",
+          "title": "Villa Contemporaine - Palmeraie Marrakech",
+          "imageUrl": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&auto=format&fit=crop&q=80",
+          "category": "Villa"
+        },
+        {
+          "id": "port-2",
+          "title": "Penthouse avec Vue Mer - Casablanca Anfa",
+          "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&auto=format&fit=crop&q=80",
+          "category": "Appartement"
+        },
+        {
+          "id": "port-3",
+          "title": "Riad Rénové 6 Suites - Médina Marrakech",
+          "imageUrl": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&auto=format&fit=crop&q=80",
+          "category": "Riad"
+        }
+      ],
+      "openingHours": "Lun - Sam : 09:00 - 19:30 | Dimanche sur RDV",
+      "isActive": true,
+      "viewsCount": 4,
+      "qrScansCount": 0,
+      "nfcTapsCount": 0,
+      "whatsappClicksCount": 0,
+      "callClicksCount": 0,
+      "vcardDownloadsCount": 0,
+      "createdAt": "2026-01-15T10:00:00.000Z",
+      "updatedAt": "2026-02-20T14:30:00.000Z",
+      "isProtected": false
+    },
+    {
+      "id": "prof-resto",
+      "slug": "le-jardin-marrakech",
+      "ownerName": "Chef Karim Tazi",
+      "companyName": "Restaurant Le Jardin Secret",
+      "jobTitle": "Chef Propriétaire & Fondateur",
+      "bio": "Cuisine marocaine raffinée et gastronomie méditerranéenne au cœur d'un patio verdoyant. Produits frais du terroir, ambiance tamisée et service d'exception.",
+      "category": "Restauration",
+      "avatarUrl": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&auto=format&fit=crop&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&auto=format&fit=crop&q=80",
+      "theme": "warm_restaurant",
+      "phone": "+212524445566",
+      "whatsapp": "+212660112233",
+      "email": "reservation@lejardin-marrakech.com",
+      "website": "https://lejardin-marrakech.com",
+      "address": "32 Rue Sidi Abdelaziz, Médina",
+      "city": "Marrakech",
+      "googleMapsUrl": "https://maps.google.com/?q=Medina+Marrakech",
+      "socials": {
+        "instagram": "https://instagram.com/lejardinmarrakech",
+        "facebook": "https://facebook.com/lejardinmarrakech",
+        "tiktok": "https://tiktok.com/@lejardin.secret"
+      },
+      "services": [
+        {
+          "id": "menu-1",
+          "title": "Pastilla Traditionnelle au Pigeon & Amandes",
+          "description": "Feuilletage croustillant artisanal, cannelle douce et éclats d'amandes dorées.",
+          "price": "130 DH"
+        },
+        {
+          "id": "menu-2",
+          "title": "Tajine d'Agneau aux Pruneaux Caramélisés",
+          "description": "Viande fondante mijotée 5 heures, graines de sésame grillées et amandes.",
+          "price": "160 DH"
+        },
+        {
+          "id": "menu-3",
+          "title": "Thé Gourmand à la Menthe & Pâtisseries Fassies",
+          "description": "Corne de gazelle, ghriba aux noix et briouates au miel pur.",
+          "price": "70 DH"
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "resto-p1",
+          "title": "Patio et Fontaine Végétale",
+          "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=80",
+          "category": "Ambiance"
+        },
+        {
+          "id": "resto-p2",
+          "title": "Tajine Royal Marocain",
+          "imageUrl": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&auto=format&fit=crop&q=80",
+          "category": "Gastronomie"
+        }
+      ],
+      "openingHours": "Tous les jours : 12:00 - 23:30 (Service continu)",
+      "isActive": true,
+      "viewsCount": 0,
+      "qrScansCount": 0,
+      "nfcTapsCount": 0,
+      "whatsappClicksCount": 0,
+      "callClicksCount": 0,
+      "vcardDownloadsCount": 0,
+      "createdAt": "2026-01-10T12:00:00.000Z",
+      "updatedAt": "2026-02-18T16:00:00.000Z",
+      "isProtected": false
+    },
+    {
+      "id": "prof-sara",
+      "slug": "sara-kabbaj",
+      "ownerName": "Sara Kabbaj",
+      "companyName": "Sara Kabbaj Beauty Studio",
+      "jobTitle": "Makeup Artist & Esthéticienne Certifiée",
+      "bio": "Sublimez votre beauté pour vos mariages, fiançailles et événements spéciaux à Casablanca. Soins experts de la peau, maquillage mariée haute tenue et lamination des sourcils.",
+      "category": "Beauté & Bien-être",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&auto=format&fit=crop&q=80",
+      "theme": "purple_beauty",
+      "phone": "+212662998877",
+      "whatsapp": "+212662998877",
+      "email": "contact@sarakabbaj.ma",
+      "website": "https://sarakabbaj.ma",
+      "address": "Résidence Les Lilas, Boulevard Franklin Roosevelt, Racine",
+      "city": "Casablanca",
+      "googleMapsUrl": "https://maps.google.com/?q=Racine+Casablanca",
+      "socials": {
+        "instagram": "https://instagram.com/sarakabbaj.beauty",
+        "tiktok": "https://tiktok.com/@sarakabbaj.mua"
+      },
+      "services": [
+        {
+          "id": "serv-s1",
+          "title": "Pack Mariée VIP Prestige",
+          "description": "Essai maquillage, soin éclat visage, pose cils HD, maquillage jour J et retouche soirée.",
+          "price": "2 800 DH"
+        },
+        {
+          "id": "serv-s2",
+          "title": "Maquillage Soirée & Invité",
+          "description": "Teint parfait sans effet masque, contouring lumineux et regard intensifié.",
+          "price": "600 DH"
+        },
+        {
+          "id": "serv-s3",
+          "title": "Hydrafacial & Soin Détoxifiant",
+          "description": "Nettoyage profond, extraction sans douleur et hydratation intense par sérums vitaminés.",
+          "price": "750 DH"
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "sara-p1",
+          "title": "Maquillage Mariée Royale Marocaine",
+          "imageUrl": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&auto=format&fit=crop&q=80",
+          "category": "Mariage"
+        },
+        {
+          "id": "sara-p2",
+          "title": "Look Glamour Soirée",
+          "imageUrl": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&auto=format&fit=crop&q=80",
+          "category": "Soirée"
+        }
+      ],
+      "openingHours": "Mardi au Dimanche : 10:00 - 20:00 | Fermé le Lundi",
+      "isActive": true,
+      "viewsCount": 0,
+      "qrScansCount": 0,
+      "nfcTapsCount": 0,
+      "whatsappClicksCount": 0,
+      "callClicksCount": 0,
+      "vcardDownloadsCount": 0,
+      "createdAt": "2026-01-20T11:00:00.000Z",
+      "updatedAt": "2026-02-22T09:00:00.000Z",
+      "isProtected": false
+    },
+    {
+      "id": "prof-yassine",
+      "slug": "yassine-dev",
+      "ownerName": "Yassine El Mansouri",
+      "companyName": "Nexus Digital Studio",
+      "jobTitle": "Consultant Tech & Développeur Full-Stack",
+      "bio": "J'aide les entreprises et startups marocaines à concevoir des applications web et mobiles modernes, rapides et orientées conversion.",
+      "category": "Tech & Freelance",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80",
+      "coverUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=80",
+      "theme": "modern_dark",
+      "phone": "+212678123987",
+      "whatsapp": "+212678123987",
+      "email": "yassine@nexusdigital.ma",
+      "website": "https://nexusdigital.ma",
+      "city": "Tanger",
+      "googleMapsUrl": "https://maps.google.com/?q=Tanger+City+Center",
+      "socials": {
+        "linkedin": "https://linkedin.com/in/yassine-elmansouri",
+        "instagram": "https://instagram.com/yassine.code",
+        "twitter": "https://twitter.com/yassine_tech"
+      },
+      "services": [
+        {
+          "id": "y-s1",
+          "title": "Création Site Web & E-commerce",
+          "description": "Boutique en ligne optimisée pour le paiement par carte CMI et livraison au Maroc.",
+          "price": "À partir de 4 500 DH"
+        },
+        {
+          "id": "y-s2",
+          "title": "Applications Mobiles iOS & Android",
+          "description": "Applications natives ou cross-platform fluides et intuitives.",
+          "price": "Sur Devis"
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "y-p1",
+          "title": "Application E-commerce Mode Maroc",
+          "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80",
+          "category": "Web & Mobile"
+        }
+      ],
+      "openingHours": "Lun - Ven : 09:00 - 18:30",
+      "isActive": true,
+      "viewsCount": 0,
+      "qrScansCount": 0,
+      "nfcTapsCount": 0,
+      "whatsappClicksCount": 0,
+      "callClicksCount": 0,
+      "vcardDownloadsCount": 0,
+      "createdAt": "2026-02-01T15:00:00.000Z",
+      "updatedAt": "2026-02-25T11:00:00.000Z",
+      "isProtected": false
+    },
+    {
+      "id": "prof-42d979cf",
+      "slug": "riad-mansouri-marrakech",
+      "ownerName": "Nabil Mansouri",
+      "companyName": "Riad Mansouri Marrakech",
+      "jobTitle": "Gérant & Propriétaire",
+      "bio": "Table d'hôtes marocaine traditionnelle au cœur de la médina.",
+      "category": "Restauration",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+      "logoUrl": "",
+      "coverUrl": "from-amber-700 to-amber-900",
+      "theme": "luxury_gold",
+      "phone": "+212661998877",
+      "whatsapp": "+212661998877",
+      "email": "nabil@riadmansouri.ma",
+      "website": "https://riadmansouri.ma",
+      "address": "Derb Dabachi, Médina",
+      "city": "Marrakech",
+      "googleMapsUrl": "",
+      "socials": {
+        "instagram": "https://instagram.com/riadmansourimarrakech"
+      },
+      "services": [
+        {
+          "id": "srv-1",
+          "title": "Prestation Principale",
+          "description": "Service sur-mesure de haute qualité.",
+          "price": "Sur devis"
+        },
+        {
+          "id": "srv-2",
+          "title": "Consultation & RDV",
+          "description": "Prise de contact rapide sur WhatsApp.",
+          "price": "Gratuit"
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "port-1",
+          "title": "Réalisation 1",
+          "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80"
+        },
+        {
+          "id": "port-2",
+          "title": "Réalisation 2",
+          "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80"
+        },
+        {
+          "id": "port-3",
+          "title": "Réalisation 3",
+          "imageUrl": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=80"
+        }
+      ],
+      "isActive": true,
+      "isProtected": false,
+      "accessPassword": "TK-1195",
+      "createdFromOrderNumber": "NFC-2026-005",
+      "viewsCount": 0,
+      "qrScansCount": 0,
+      "nfcTapsCount": 0,
+      "whatsappClicksCount": 0,
+      "callClicksCount": 0,
+      "vcardDownloadsCount": 0,
+      "createdAt": "2026-08-29T22:42:58.987Z",
+      "updatedAt": "2026-08-29T22:42:58.987Z"
+    },
+    {
+      "id": "prof-c292ecec",
+      "slug": "test-client-simplifie",
+      "ownerName": "Test Client Simplifié",
+      "companyName": "Entreprise",
+      "jobTitle": "Professionnel",
+      "bio": "Bienvenue sur le profil digital officiel de Test Client Simplifié.",
+      "category": "Professionnel",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+      "logoUrl": "",
+      "coverUrl": "from-amber-700 to-amber-900",
+      "theme": "luxury_gold",
+      "phone": "0612345678",
+      "whatsapp": "0612345678",
+      "email": "",
+      "website": "",
+      "address": "Quartier Palmier, Rue 12",
+      "city": "Casablanca",
+      "googleMapsUrl": "",
+      "socials": {},
+      "services": [
+        {
+          "id": "srv-1",
+          "title": "Prestation Principale",
+          "description": "Service sur-mesure de haute qualité.",
+          "price": "Sur devis"
+        },
+        {
+          "id": "srv-2",
+          "title": "Consultation & RDV",
+          "description": "Prise de contact rapide sur WhatsApp.",
+          "price": "Gratuit"
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "port-1",
+          "title": "Réalisation 1",
+          "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80"
+        },
+        {
+          "id": "port-2",
+          "title": "Réalisation 2",
+          "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80"
+        },
+        {
+          "id": "port-3",
+          "title": "Réalisation 3",
+          "imageUrl": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=80"
+        }
+      ],
+      "isActive": true,
+      "isProtected": false,
+      "accessPassword": "TK-2684",
+      "createdFromOrderNumber": "NFC-2026-006",
+      "viewsCount": 0,
+      "qrScansCount": 0,
+      "nfcTapsCount": 0,
+      "whatsappClicksCount": 0,
+      "callClicksCount": 0,
+      "vcardDownloadsCount": 0,
+      "createdAt": "2026-09-08T15:10:27.185Z",
+      "updatedAt": "2026-09-08T15:10:27.185Z"
+    },
+    {
+      "id": "prof-18bf4fc0",
+      "slug": "abdellah-ait-dahmou",
+      "ownerName": "abdellah ait dahmou",
+      "companyName": "abdellah ait dahmou",
+      "jobTitle": "Professionnel",
+      "bio": "Bienvenue sur le profil digital officiel de abdellah ait dahmou.",
+      "category": "Professionnel",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+      "logoUrl": "",
+      "coverUrl": "from-amber-700 to-amber-900",
+      "theme": "luxury_gold",
+      "phone": "0682192641",
+      "whatsapp": "0682192641",
+      "email": "",
+      "website": "",
+      "address": "MASKANI",
+      "city": "Agadir",
+      "googleMapsUrl": "",
+      "socials": {},
+      "services": [
+        {
+          "id": "srv-1",
+          "title": "Prestation Principale",
+          "description": "Service sur-mesure de haute qualité.",
+          "price": "Sur devis"
+        },
+        {
+          "id": "srv-2",
+          "title": "Consultation & RDV",
+          "description": "Prise de contact rapide sur WhatsApp.",
+          "price": "Gratuit"
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "port-1",
+          "title": "Réalisation 1",
+          "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80"
+        },
+        {
+          "id": "port-2",
+          "title": "Réalisation 2",
+          "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80"
+        },
+        {
+          "id": "port-3",
+          "title": "Réalisation 3",
+          "imageUrl": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=80"
+        }
+      ],
+      "isActive": true,
+      "isProtected": false,
+      "accessPassword": "TK-7657",
+      "createdFromOrderNumber": "NFC-2026-001",
+      "viewsCount": 5,
+      "qrScansCount": 0,
+      "nfcTapsCount": 0,
+      "whatsappClicksCount": 0,
+      "callClicksCount": 0,
+      "vcardDownloadsCount": 0,
+      "createdAt": "2026-09-10T12:44:07.247Z",
+      "updatedAt": "2026-09-10T12:44:07.247Z"
+    },
+    {
+      "id": "prof-43a6aad7",
+      "slug": "nfcard",
+      "ownerName": "ABDELLAH AIT DAHMOU",
+      "companyName": "NFcard",
+      "jobTitle": "Professionnel",
+      "bio": "Bienvenue sur le profil digital officiel de ABDELLAH AIT DAHMOU.",
+      "category": "Professionnel",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+      "logoUrl": "",
+      "coverUrl": "from-amber-700 to-amber-900",
+      "theme": "luxury_gold",
+      "phone": "0682192641",
+      "whatsapp": "0682192641",
+      "email": "",
+      "website": "",
+      "address": "MASKANI",
+      "city": "Agadir",
+      "googleMapsUrl": "",
+      "socials": {},
+      "services": [
+        {
+          "id": "srv-1",
+          "title": "Prestation Principale",
+          "description": "Service sur-mesure de haute qualité.",
+          "price": "Sur devis"
+        },
+        {
+          "id": "srv-2",
+          "title": "Consultation & RDV",
+          "description": "Prise de contact rapide sur WhatsApp.",
+          "price": "Gratuit"
+        }
+      ],
+      "portfolio": [
+        {
+          "id": "port-1",
+          "title": "Réalisation 1",
+          "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80"
+        },
+        {
+          "id": "port-2",
+          "title": "Réalisation 2",
+          "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80"
+        },
+        {
+          "id": "port-3",
+          "title": "Réalisation 3",
+          "imageUrl": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=80"
+        }
+      ],
+      "isActive": true,
+      "isProtected": false,
+      "accessPassword": "TK-6765",
+      "createdFromOrderNumber": "NFC-2026-002",
+      "viewsCount": 5,
+      "qrScansCount": 0,
+      "nfcTapsCount": 0,
+      "whatsappClicksCount": 0,
+      "callClicksCount": 0,
+      "vcardDownloadsCount": 0,
+      "createdAt": "2026-09-10T12:52:31.982Z",
+      "updatedAt": "2026-09-10T12:52:31.982Z"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-38f2c416",
+      "uid": "NFC-MA-1001",
+      "cardSlug": "abdellah-ait-dahmou",
+      "targetProfileSlug": "abdellah-ait-dahmou",
+      "customerName": "abdellah ait dahmou",
+      "status": "pending",
+      "orderNumber": "NFC-2026-001",
+      "activationDate": "2026-09-10T12:44:07.248Z",
+      "totalTaps": 0
+    },
+    {
+      "id": "card-0c6ef563",
+      "uid": "NFC-MA-1002",
+      "cardSlug": "nfcard",
+      "targetProfileSlug": "nfcard",
+      "customerName": "ABDELLAH AIT DAHMOU",
+      "status": "pending",
+      "orderNumber": "NFC-2026-002",
+      "activationDate": "2026-09-10T12:52:31.982Z",
+      "totalTaps": 0
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-79b523dd",
+      "orderNumber": "NFC-2026-002",
+      "createdAt": "2026-09-10T12:52:31.983Z",
+      "status": "new",
+      "productOrPackName": "Lot de 10 Stickers / Autocollants NFC NTAG215",
+      "productType": "product",
+      "productId": "prod-nfc-stickers-10",
+      "quantity": 1,
+      "unitPrice": 130,
+      "totalPrice": 165,
+      "paymentStatus": "cash_on_delivery",
+      "customerInfo": {
+        "fullName": "ABDELLAH AIT DAHMOU",
+        "companyName": "NFcard",
+        "phone": "0682192641",
+        "whatsapp": "0682192641",
+        "city": "Agadir",
+        "address": "MASKANI",
+        "notes": "",
+        "logoUrl": "",
+        "oldCardPhotoUrl": "/uploads/file-1789044751865-808866835.png"
+      },
+      "createdProfileSlug": "nfcard",
+      "accessPassword": "TK-6765",
+      "adminNotes": [
+        "Profil généré automatiquement: /p/nfcard (Code d'accès: TK-6765)"
+      ],
+      "history": [
+        {
+          "status": "new",
+          "timestamp": "2026-09-10T12:52:31.983Z",
+          "note": "Commande passée par le client. Profil /p/nfcard créé avec mot de passe TK-6765."
+        }
+      ]
+    },
+    {
+      "id": "ord-887e3eab",
+      "orderNumber": "NFC-2026-001",
+      "createdAt": "2026-09-10T12:44:07.248Z",
+      "status": "new",
+      "productOrPackName": "Bracelet NFC Tissé Ajustable Événements & Hôtels",
+      "productType": "product",
+      "productId": "prod-wristbands-4",
+      "quantity": 1,
+      "unitPrice": 100,
+      "totalPrice": 135,
+      "paymentStatus": "cash_on_delivery",
+      "customerInfo": {
+        "fullName": "abdellah ait dahmou",
+        "companyName": "abdellah ait dahmou",
+        "phone": "0682192641",
+        "whatsapp": "0682192641",
+        "city": "Agadir",
+        "address": "MASKANI",
+        "notes": "",
+        "logoUrl": "",
+        "oldCardPhotoUrl": ""
+      },
+      "createdProfileSlug": "abdellah-ait-dahmou",
+      "accessPassword": "TK-7657",
+      "adminNotes": [
+        "Profil généré automatiquement: /p/abdellah-ait-dahmou (Code d'accès: TK-7657)"
+      ],
+      "history": [
+        {
+          "status": "new",
+          "timestamp": "2026-09-10T12:44:07.248Z",
+          "note": "Commande passée par le client. Profil /p/abdellah-ait-dahmou créé avec mot de passe TK-7657."
+        }
+      ]
+    }
+  ],
+  "competitors": [
+    {
+      "id": "comp-1",
+      "companyName": "SmartCard Maroc (Exemple Marché)",
+      "website": "https://smartcard-maroc.example.com",
+      "instagram": "@smartcard_maroc",
+      "facebook": "SmartCardMorocco",
+      "product": "Cartes NFC standard en PVC",
+      "price": "250 DH - 400 DH",
+      "packageDetails": "Carte PVC avec lien Linktree ou page basique générique.",
+      "targetCustomer": "Particuliers & Freelancers",
+      "advantages": "Présence active sur Instagram, livraison Amana.",
+      "weaknesses": "Designs de profil très basiques, pas de gestion de menu restaurant, pas de vrai suivi des analytics, support client lent.",
+      "notes": "Données relevées lors de l'étude de marché de Février 2026. À vérifier périodiquement.",
+      "dateResearched": "2026-02-10",
+      "isVerified": true
+    },
+    {
+      "id": "comp-2",
+      "companyName": "TapLink Pro Maroc",
+      "website": "https://taplinkpro.example.com",
+      "instagram": "@taplink_ma",
+      "product": "Carte NFC Métal & Bambou",
+      "price": "450 DH - 700 DH",
+      "packageDetails": "Carte NFC haut de gamme avec QR code au verso.",
+      "targetCustomer": "Cadres dirigeants et agents immobiliers",
+      "advantages": "Matériaux nobles (bois/métal), packaging soigné.",
+      "weaknesses": "Prix élevé, pas de service clé-en-main de création du profil (le client doit tout saisir lui-même), pas de vCard v3 enrichie.",
+      "notes": "Positionnement luxe mais expérience client technique complexe pour les commerçants traditionnels.",
+      "dateResearched": "2026-02-15",
+      "isVerified": true
+    },
+    {
+      "id": "comp-3",
+      "companyName": "MenuScan Restaurant Maroc",
+      "website": "https://menuscan.example.com",
+      "instagram": "@menuscan_maroc",
+      "product": "Chevalets QR Code pour restaurants",
+      "price": "600 DH / an (Abonnement)",
+      "packageDetails": "Affichage simple d'un fichier PDF sur smartphone.",
+      "targetCustomer": "Cafés, Snacks et Restaurants à Casablanca & Marrakech",
+      "advantages": "Spécialisé restauration.",
+      "weaknesses": "Simple PDF non interactif (zoom désagréable sur mobile), pas de commande WhatsApp, abonnement récurrent imposé.",
+      "notes": "Opportunité majeure pour Tektap : offrir un vrai menu digital interactif avec commande WhatsApp sans abonnement contraignant.",
+      "dateResearched": "2026-02-20",
+      "isVerified": true
+    }
+  ],
+  "analyticsEvents": [],
+  "messages": []
+}

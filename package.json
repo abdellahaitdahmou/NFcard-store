@@ -1,0 +1,13 @@
+{
+  "name": "nfc-store-morocco",
+  "version": "1.0.0",
+  "description": "Premium NFC Business Cards & Digital Business Profiles Platform for Morocco",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "start": "node server/dist/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
