@@ -24,22 +24,22 @@ export const ServicesSection: React.FC = () => {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section className="section-white py-28 border-t border-gray-100 overflow-hidden">
+    <section className="section-white py-16 sm:py-20 lg:py-28 border-t border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-14 lg:mb-16"
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
           <div className="badge badge-slate mx-auto mb-4 block w-fit">Ce qui est inclus</div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-3 sm:mb-4">
             Tout ce que vous obtenez<br className="hidden sm:block" />
             <span className="emerald-gradient-text"> avec votre carte NFcard.</span>
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
+          <p className="text-gray-500 text-sm sm:text-lg max-w-xs sm:max-w-xl mx-auto leading-relaxed">
             Bien plus qu une simple carte NFC - une plateforme digitale complete pour votre activite.
           </p>
         </motion.div>

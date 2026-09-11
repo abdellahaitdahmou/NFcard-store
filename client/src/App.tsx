@@ -5,7 +5,6 @@ import { SettingsProvider } from "./contexts/SettingsContext";
 import { AuthProvider } from "./contexts/AuthContext";
 import { Navbar } from "./components/common/Navbar";
 import { Footer } from "./components/common/Footer";
-import { AnnouncementBar } from "./components/common/AnnouncementBar";
 import { WhatsAppFloat } from "./components/common/WhatsAppFloat";
 import { MobileBottomNav } from "./components/common/MobileBottomNav";
 
@@ -42,7 +41,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800 selection:bg-amber-400 selection:text-slate-950">
-      <AnnouncementBar />
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />

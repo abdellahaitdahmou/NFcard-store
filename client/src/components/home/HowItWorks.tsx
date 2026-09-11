@@ -17,11 +17,11 @@ export const HowItWorks: React.FC = () => {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section className="section-gray py-28 border-t border-gray-100 overflow-hidden">
+    <section className="section-gray py-16 sm:py-20 lg:py-28 border-t border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <motion.div
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
@@ -30,11 +30,11 @@ export const HowItWorks: React.FC = () => {
           <motion.div className="badge badge-orange mx-auto mb-4 block w-fit" initial={{ scale: 0 }} animate={inView ? { scale: 1 } : {}} transition={{ type: 'spring', delay: 0.2 }}>
             Comment ca marche
           </motion.div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-5">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 sm:mb-5">
             Aussi simple que<br className="hidden sm:block" />
             <span className="gold-gradient-text"> d'appuyer sur un bouton.</span>
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
+          <p className="text-gray-500 text-sm sm:text-lg max-w-xs sm:max-w-xl mx-auto leading-relaxed">
             De la commande a la livraison, tout est pris en charge par notre equipe au Maroc.
           </p>
         </motion.div>

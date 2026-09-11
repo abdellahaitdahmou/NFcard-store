@@ -387,9 +387,9 @@ html, body {
 }
 
 @media (max-width: 640px) {
-  .section-white, .section-slate {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  .section-white, .section-slate, .section-gray {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 }
 
@@ -451,9 +451,23 @@ body {
 /* Bottom safe margin for mobile navigation bar */
 @media (max-width: 768px) {
   main {
-    padding-bottom: 4.5rem;
-  }
-  footer {
     padding-bottom: 5rem;
   }
+  footer {
+    padding-bottom: 5.5rem;
+  }
+}
+
+/* ── xs breakpoint utilities (475px) ── */
+@media (min-width: 475px) {
+  .xs\:text-4xl  { font-size: 2.25rem;  line-height: 2.5rem; }
+  .xs\:text-5xl  { font-size: 3rem;     line-height: 1; }
+  .xs\:flex-row  { flex-direction: row; }
+  .xs\:max-w-\[270px\] { max-width: 270px; }
+  .xs\:max-w-\[280px\] { max-width: 280px; }
+  .xs\:p-4       { padding: 1rem; }
+  .xs\:inline-flex { display: inline-flex; }
+  .xs\:text-3xl  { font-size: 1.875rem; line-height: 2.25rem; }
+  .xs\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .xs\:text-\[5\.25rem\] { font-size: 5.25rem; }
 }

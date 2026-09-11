@@ -47,30 +47,30 @@ export const FeaturedProductsSection: React.FC = () => {
     : products.filter(p => p.category === activeTab);
 
   return (
-    <section className="py-20 sm:py-28 bg-slate-50/70 border-t border-slate-200/80 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+    <section className="py-14 sm:py-20 lg:py-28 bg-slate-50/70 border-t border-slate-200/80 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8 sm:space-y-12">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
+        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
             <span>Catalogue Disponible en Stock</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
-            Nos Produits & Solutions NFC <br />
-            <span className="gold-gradient-text">Prêts à être Expédiés au Maroc.</span>
+          <h2 className="text-2xl xs:text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            Nos Produits & Solutions NFC{' '}
+            <span className="gold-gradient-text">Prêts à être Expédiés.</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
-            Cartes connectées, chevalets d'avis Google Maps, plaques réseaux sociaux, stickers et copieurs de badges RFID avec paiement à la livraison.
+          <p className="text-slate-600 text-sm sm:text-lg max-w-xs sm:max-w-2xl mx-auto leading-relaxed">
+            Cartes connectées, chevalets Google Maps, plaques réseaux sociaux, stickers et copieurs RFID — paiement à la livraison.
           </p>
 
-          {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
+          {/* Category Filter Tabs — horizontally scrollable on mobile */}
+          <div className="flex items-center gap-2 pt-3 sm:pt-4 overflow-x-auto no-scrollbar pb-1 justify-start sm:justify-center">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex-shrink-0 ${
                   activeTab === cat.id
                     ? "bg-slate-900 text-white shadow-md shadow-slate-900/10 scale-105"
                     : "bg-white border border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50"

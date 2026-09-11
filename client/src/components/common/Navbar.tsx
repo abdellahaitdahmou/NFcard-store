@@ -37,13 +37,13 @@ export const Navbar: React.FC = () => {
           ? 'bg-white/96 backdrop-blur-xl shadow-lg shadow-slate-900/5 border-b border-slate-100'
           : 'bg-white/85 backdrop-blur-md'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-20">
+            <div className="flex items-center justify-between h-16 sm:h-20">
 
               <Link to="/" className="flex items-center group py-1">
                 <img
                   src="/logo-full.png"
                   alt="NFcard.ma Logo"
-                  className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+                  className="h-8 sm:h-10 lg:h-12 w-auto object-contain transition-transform group-hover:scale-105"
                 />
               </Link>
 
@@ -119,7 +119,7 @@ export const Navbar: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <div className="h-20" />
+      <div className="h-16 sm:h-20" />
     </>
   );
 };
