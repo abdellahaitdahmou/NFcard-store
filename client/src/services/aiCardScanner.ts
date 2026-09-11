@@ -1,4 +1,4 @@
-﻿import { createWorker } from "tesseract.js";
+import { createWorker } from "tesseract.js";
 import { ProfileTheme, ServiceItem } from "../types";
 
 export interface ExtractedCardData {
@@ -11,6 +11,7 @@ export interface ExtractedCardData {
   website: string;
   city: string;
   address: string;
+  googleMapsUrl?: string;
   bio: string;
   category: string;
   theme: ProfileTheme;
@@ -284,6 +285,16 @@ export async function scanCardWithOCR(
     bio = `${companyName} prend soin de ses clients avec professionnalisme et rigueur à ${city}. Contactez-nous pour toute demande d'information ou de prestation.`;
   }
 
+  // 9. Google Maps Link
+  let googleMapsUrl = "";
+  const mapsMatch = fullText.match(/(?:https?:\/\/)?(?:www\.)?(?:google\.[a-z.]+\/maps|maps\.google\.[a-z.]+|goo\.gl\/maps|maps\.app\.goo\.gl)\/[^\s]+/i);
+  if (mapsMatch) {
+    googleMapsUrl = mapsMatch[0].startsWith("http") ? mapsMatch[0] : `https://${mapsMatch[0]}`;
+  } else if (city) {
+    const query = [companyName, city, "Maroc"].filter(Boolean).join(" ");
+    googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  }
+
   const slug = slugify(ownerName || companyName || "profil");
 
   onProgress?.("Extraction terminée avec succès !", 100);
@@ -298,6 +309,7 @@ export async function scanCardWithOCR(
     website,
     city,
     address: "Maroc",
+    googleMapsUrl,
     bio,
     category,
     theme,
@@ -378,6 +390,7 @@ Extract:
 12. theme: One of: "luxury_gold", "modern_dark", "emerald_corporate", "warm_restaurant", "purple_beauty", "sky_realestate", "slate_tech", "minimal_light".
 13. socials: Extract ALL social media accounts mentioned (Facebook, Instagram, TikTok, LinkedIn, YouTube, Twitter). Return them as direct clickable URLs starting with https://.
 14. services: List of all services/offerings on the card with "title" and "description".
+15. googleMapsUrl: Google Maps link or location link if present.
 
 Return ONLY a valid JSON object without any markdown wrapping or backticks with this exact structure:
 {
@@ -390,6 +403,7 @@ Return ONLY a valid JSON object without any markdown wrapping or backticks with 
   "website": "string",
   "city": "string",
   "address": "string",
+  "googleMapsUrl": "string",
   "bio": "string",
   "category": "string",
   "theme": "string",
@@ -460,6 +474,7 @@ Return ONLY a valid JSON object without any markdown wrapping or backticks with 
       website: parsed.website || "",
       city: parsed.city || "Casablanca",
       address: parsed.address || "",
+      googleMapsUrl: parsed.googleMapsUrl || (parsed.city ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([parsed.companyName, parsed.address, parsed.city, "Maroc"].filter(Boolean).join(" "))}` : ""),
       bio: parsed.bio || "",
       category: parsed.category || "Commerce & Retail",
       theme: (parsed.theme as ProfileTheme) || "modern_dark",

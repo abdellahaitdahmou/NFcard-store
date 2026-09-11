@@ -29,6 +29,7 @@ export interface ProfileData {
   facebook?: string;
   linkedin?: string;
   tiktok?: string;
+  googleMapsUrl?: string;
   location?: string;
   hours?: string;
   theme?: string;
@@ -39,18 +40,31 @@ export interface ProfileData {
 
 interface Props { profile: ProfileData; }
 
-function SocialBtn({ href, icon, label, color }: { href: string; icon: React.ReactNode; label: string; color: string }) {
+function SocialBtn({
+  href,
+  icon,
+  label,
+  color,
+  target
+}: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+  color: string;
+  target?: string;
+}) {
+  const isExternal = href.startsWith("http");
   return (
     <motion.a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={target || (isExternal ? "_blank" : undefined)}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className={`flex items-center justify-center gap-2 w-full px-4 py-3 rounded-2xl font-semibold text-sm text-white transition-all ${color}`}
       whileHover={{ scale: 1.03, y: -1 }}
       whileTap={{ scale: 0.97 }}
     >
       {icon}
-      {label}
+      <span>{label}</span>
     </motion.a>
   );
 }
@@ -110,6 +124,13 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
 
   const cover = profile.coverColor || "from-emerald-600 to-teal-700";
   const displayed = showAllSvc ? profile.services : profile.services?.slice(0, 3);
+  const mapsUrl =
+    profile.googleMapsUrl ||
+    (profile.location
+      ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+          [profile.company, profile.location].filter(Boolean).join(", ")
+        )}`
+      : undefined);
 
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center pb-20">
@@ -166,9 +187,29 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
         <motion.div className="px-5 mb-5" {...fadeUp(0.1)}>
           <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">{profile.name}</h1>
           <p className="text-emerald-600 font-semibold text-sm mt-0.5">{profile.title}</p>
-          <p className="text-gray-500 text-xs font-medium flex items-center gap-1 mt-1">
-            <Briefcase className="w-3.5 h-3.5" /> {profile.company}
-            {profile.location && <><span className="mx-1">·</span><MapPin className="w-3.5 h-3.5" />{profile.location}</>}
+          <p className="text-gray-500 text-xs font-medium flex items-center gap-1 mt-1 flex-wrap">
+            <Briefcase className="w-3.5 h-3.5 flex-shrink-0" /> {profile.company}
+            {profile.location && (
+              <>
+                <span className="mx-1">·</span>
+                {mapsUrl ? (
+                  <a
+                    href={mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-emerald-600 hover:text-emerald-700 font-semibold underline decoration-dotted transition-colors"
+                  >
+                    <MapPin className="w-3.5 h-3.5 text-rose-500 flex-shrink-0" />
+                    {profile.location}
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-rose-500 flex-shrink-0" />
+                    {profile.location}
+                  </span>
+                )}
+              </>
+            )}
           </p>
 
           {profile.bio && (
@@ -187,21 +228,32 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
 
         {/* ── PRIMARY ACTIONS ── */}
         <motion.div className="px-5 space-y-2.5 mb-5" {...fadeUp(0.18)}>
+          {/* WhatsApp Direct Action Button */}
           {profile.whatsapp && (
             <SocialBtn
-              href={`https://wa.me/${profile.whatsapp.replace(/\D/g, "")}?text=Bonjour, j'ai scanné votre carte NFC NFcard.`}
+              href={`https://wa.me/${profile.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Bonjour, j'ai scanné votre profil digital NFcard.")}`}
               icon={<MessageCircle className="w-5 h-5" />}
-              label={`WhatsApp — ${profile.whatsapp}`}
+              label="WhatsApp"
               color="bg-[#25D366] hover:bg-[#1da851] shadow-md shadow-green-500/20"
             />
           )}
+
+          {/* Action Grid (Appeler, Google Maps, Email) - NO raw phone numbers displayed */}
           <div className="grid grid-cols-2 gap-2.5">
             {profile.phone && (
               <SocialBtn
                 href={`tel:${profile.phone.replace(/\D/g, "")}`}
                 icon={<Phone className="w-4 h-4" />}
-                label={profile.phone}
+                label="Appeler"
                 color="bg-gray-900 hover:bg-gray-800 shadow-md shadow-gray-900/20"
+              />
+            )}
+            {mapsUrl && (
+              <SocialBtn
+                href={mapsUrl}
+                icon={<MapPin className="w-4 h-4 text-rose-300" />}
+                label="Google Maps"
+                color="bg-rose-600 hover:bg-rose-700 shadow-md shadow-rose-600/20"
               />
             )}
             {profile.email && (
@@ -209,7 +261,7 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
                 href={`mailto:${profile.email}`}
                 icon={<Mail className="w-4 h-4" />}
                 label="Email"
-                color="bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-500/20"
+                color={`bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-500/20 ${(!profile.phone || !mapsUrl) ? '' : 'col-span-2'}`}
               />
             )}
           </div>

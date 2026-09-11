@@ -69,6 +69,7 @@ export const ProfilePage: React.FC = () => {
     facebook: profile.socials?.facebook || undefined,
     linkedin: profile.socials?.linkedin || undefined,
     tiktok: profile.socials?.tiktok || undefined,
+    googleMapsUrl: profile.googleMapsUrl || (profile.address || profile.city ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([profile.companyName, profile.address, profile.city].filter(Boolean).join(", "))}` : undefined),
     location: profile.city || profile.address || undefined,
     hours: profile.openingHours || undefined,
     theme: profile.theme || "luxury_gold",

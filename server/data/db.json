@@ -876,7 +876,8 @@
           "description": "Prise en charge express et livraison rapide.",
           "price": "Inclus"
         }
-      ]
+      ],
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Haut+Pressing+Agadir+Maroc"
     }
   ],
   "cards": [

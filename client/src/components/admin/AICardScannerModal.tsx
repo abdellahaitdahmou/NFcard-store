@@ -491,6 +491,38 @@ export const AICardScannerModal: React.FC<Props> = ({
                         />
                       </div>
                     </div>
+
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-[10px] text-slate-500 font-semibold flex items-center gap-1">
+                          <MapPin className="w-3 h-3 text-rose-500" />
+                          Lien Google Maps / Itinéraire :
+                        </span>
+                        {extractedData.googleMapsUrl && (
+                          <a
+                            href={extractedData.googleMapsUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-[9px] text-rose-600 hover:underline font-bold inline-flex items-center gap-0.5"
+                          >
+                            Tester sur Google Maps <ExternalLink className="w-2.5 h-2.5" />
+                          </a>
+                        )}
+                      </div>
+                      <input
+                        type="url"
+                        placeholder="https://maps.google.com/... ou lien de localisation"
+                        value={extractedData.googleMapsUrl || ""}
+                        onChange={(e) =>
+                          setExtractedData({ ...extractedData, googleMapsUrl: e.target.value })
+                        }
+                        className="w-full bg-white border border-slate-200 rounded-xl px-2.5 py-1.5 text-xs text-slate-900"
+                      />
+                    </div>
+
+                    <p className="text-[10px] text-slate-500 bg-slate-50 border border-slate-200 rounded-lg p-2">
+                      💡 <strong>Affichage profil digital :</strong> Les numéros bruts ne sont jamais affichés en texte sur le profil public. Ils sont convertis en boutons d'action avec icônes (« Appeler », « WhatsApp », « Google Maps »).
+                    </p>
                   </div>
 
                   {/* Section 3: Social Media */}

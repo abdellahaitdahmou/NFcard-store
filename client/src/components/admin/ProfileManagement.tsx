@@ -131,6 +131,7 @@ export const ProfileManagement: React.FC = () => {
       website: data.website || prev.website,
       city: data.city || prev.city,
       address: data.address || prev.address,
+      googleMapsUrl: data.googleMapsUrl || prev.googleMapsUrl,
       instagram: data.socials?.instagram || prev.instagram,
       facebook: data.socials?.facebook || prev.facebook,
       linkedin: data.socials?.linkedin || prev.linkedin,
