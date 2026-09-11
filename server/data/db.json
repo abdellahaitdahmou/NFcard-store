@@ -4,7 +4,14 @@
       "id": "admin-1",
       "email": "admin@nfcard.ma",
       "name": "Directeur NFcard Maroc",
-      "passwordHash": "$2a$10$Nyntbvmw.zCYrNBlJvb7V.XC6KpVDZZ6YfF.7mD..4jujUrnmLNNO",
+      "passwordHash": "$2a$10$H26gB0qX8csdXB9nfHVN3uzv9ag9i3qwHuU/LZq4uRjctpfd3yh0C",
+      "role": "superadmin"
+    },
+    {
+      "id": "admin-2",
+      "email": "admin@tektap.ma",
+      "name": "Admin NFcard Backup",
+      "passwordHash": "$2a$10$H26gB0qX8csdXB9nfHVN3uzv9ag9i3qwHuU/LZq4uRjctpfd3yh0C",
       "role": "superadmin"
     }
   ],
