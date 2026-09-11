@@ -825,6 +825,58 @@
       "vcardDownloadsCount": 0,
       "createdAt": "2026-09-10T12:52:31.982Z",
       "updatedAt": "2026-09-10T12:52:31.982Z"
+    },
+    {
+      "id": "9ee3b9b4-036c-4603-bdd2-96f808040a9d",
+      "ownerName": "Haut Pressing",
+      "companyName": "HAUT PRESSING",
+      "jobTitle": "Pressing & Blanchisserie Professionnelle",
+      "phone": "+212528390138",
+      "whatsapp": "+212668460470",
+      "email": "hautpressing33@gmail.com",
+      "website": "",
+      "city": "Agadir",
+      "address": "Agadir, Maroc",
+      "bio": "La propreté, NOTRE MÉTIER, VOTRE ÉLÉGANCE. HAUT PRESSING prend soin de vos vêtements et textiles avec professionnalisme et passion. Un service de qualité, rapide et fiable.",
+      "slug": "haut-pressing",
+      "theme": "modern_dark",
+      "category": "Commerce & Retail",
+      "isActive": true,
+      "views": 42,
+      "createdAt": "2026-09-11T18:35:15.216339",
+      "updatedAt": "2026-09-11T18:35:15.216757",
+      "socials": {
+        "facebook": "https://facebook.com/hautpressing",
+        "instagram": "https://instagram.com/hautpressing",
+        "tiktok": "https://tiktok.com/@hautpressing"
+      },
+      "services": [
+        {
+          "title": "Nettoyage Expert",
+          "description": "Nettoyage à sec et à l'eau pour tous types de tissus et costumes.",
+          "price": "Sur mesure"
+        },
+        {
+          "title": "Repassage Finition Parfaite",
+          "description": "Repassage soigné et mise sur cintre impeccable.",
+          "price": "À la pièce"
+        },
+        {
+          "title": "Traitement Spécial",
+          "description": "Détachage expert, traitement textiles délicats et robes de soirée.",
+          "price": "Devis"
+        },
+        {
+          "title": "Rideaux & Couvertures",
+          "description": "Entretien complet du linge de maison, couvertures et draperies.",
+          "price": "Sur mesure"
+        },
+        {
+          "title": "Service Rapide & Fiable",
+          "description": "Prise en charge express et livraison rapide.",
+          "price": "Inclus"
+        }
+      ]
     }
   ],
   "cards": [
