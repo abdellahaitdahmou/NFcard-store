@@ -18,10 +18,13 @@ import {
   Mail,
   User,
   ExternalLink,
-  ChevronDown
+  ChevronDown,
+  Sparkles
 } from "lucide-react";
 import { Order, OrderStatus } from "../../types";
 import { api } from "../../services/api";
+import { AICardScannerModal } from "./AICardScannerModal";
+import { ExtractedCardData } from "../../services/aiCardScanner";
 
 interface OrderManagementProps {
   orders: Order[];
@@ -46,6 +49,51 @@ export const OrderManagement: React.FC<OrderManagementProps> = ({ orders, onRefr
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
   const [newNote, setNewNote] = useState("");
   const [updatingStatus, setUpdatingStatus] = useState(false);
+  const [scannerOpen, setScannerOpen] = useState(false);
+  const [scannerImageUrl, setScannerImageUrl] = useState("");
+  const [creatingProfile, setCreatingProfile] = useState(false);
+
+  const handleApplyFromOrder = async (data: ExtractedCardData, cardImageUrl?: string) => {
+    if (!selectedOrder) return;
+    setCreatingProfile(true);
+    try {
+      const generatedSlug = data.slug || `client-${selectedOrder.orderNumber.toLowerCase()}`;
+      const res = await api.createProfile({
+        slug: generatedSlug,
+        ownerName: data.ownerName || selectedOrder.customerInfo.fullName,
+        companyName: data.companyName || selectedOrder.customerInfo.companyName,
+        jobTitle: data.jobTitle || selectedOrder.customerInfo.jobTitle || "Professionnel",
+        bio: data.bio,
+        category: data.category,
+        theme: data.theme,
+        phone: data.phone || selectedOrder.customerInfo.phone,
+        whatsapp: data.whatsapp || selectedOrder.customerInfo.whatsapp || selectedOrder.customerInfo.phone,
+        email: data.email || selectedOrder.customerInfo.email,
+        website: data.website || selectedOrder.customerInfo.website,
+        city: data.city || selectedOrder.customerInfo.city,
+        address: data.address || selectedOrder.customerInfo.address,
+        avatarUrl: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&auto=format&fit=crop&q=80",
+        coverUrl: cardImageUrl || selectedOrder.customerInfo.oldCardPhotoUrl || "",
+        logoUrl: selectedOrder.customerInfo.logoUrl || "",
+        socials: data.socials || {},
+        isActive: true,
+        createdFromOrderNumber: selectedOrder.orderNumber
+      });
+
+      if (res.success) {
+        await api.addOrderNote(selectedOrder.id, `Profil digital créé via IA : /p/${generatedSlug}`);
+        await onRefresh();
+        alert(`✅ Profil digital créé avec succès via l'IA !\nURL : /p/${generatedSlug}`);
+      } else {
+        alert("Erreur lors de la création du profil.");
+      }
+    } catch (e) {
+      alert("Erreur réseau lors de la création du profil.");
+    } finally {
+      setCreatingProfile(false);
+      setScannerOpen(false);
+    }
+  };
 
   const filteredOrders = orders.filter((o) => {
     const matchesSearch =
@@ -294,7 +342,7 @@ export const OrderManagement: React.FC<OrderManagementProps> = ({ orders, onRefr
                 <p className="font-bold text-slate-900 text-xs uppercase tracking-wider">Fichiers transmis par le client :</p>
                 <div className="grid grid-cols-2 gap-3">
                   {selectedOrder.customerInfo.oldCardPhotoUrl && (
-                    <div className="space-y-1 text-center">
+                    <div className="space-y-1.5 text-center">
                       <p className="text-[11px] text-slate-600 font-bold">Photo de l'ancienne carte :</p>
                       <a href={selectedOrder.customerInfo.oldCardPhotoUrl} target="_blank" rel="noreferrer">
                         <img
@@ -303,6 +351,17 @@ export const OrderManagement: React.FC<OrderManagementProps> = ({ orders, onRefr
                           className="w-full h-32 object-cover rounded-xl border border-slate-200 hover:opacity-90 transition-opacity bg-white"
                         />
                       </a>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setScannerImageUrl(selectedOrder.customerInfo.oldCardPhotoUrl!);
+                          setScannerOpen(true);
+                        }}
+                        className="w-full flex items-center justify-center gap-1.5 py-1.5 px-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-[11px] shadow-sm transition-all"
+                      >
+                        <Sparkles className="w-3.5 h-3.5 text-white animate-pulse" />
+                        <span>Générer Profil avec l'IA</span>
+                      </button>
                     </div>
                   )}
 
@@ -368,6 +427,13 @@ export const OrderManagement: React.FC<OrderManagementProps> = ({ orders, onRefr
         </div>
       )}
 
+      {/* AI Card Scanner Modal */}
+      <AICardScannerModal
+        isOpen={scannerOpen}
+        onClose={() => setScannerOpen(false)}
+        onApplyData={handleApplyFromOrder}
+        initialImageUrl={scannerImageUrl}
+      />
     </div>
   );
 };

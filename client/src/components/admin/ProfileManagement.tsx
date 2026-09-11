@@ -9,6 +9,8 @@ import {
 import { DigitalProfile, ProfileTheme } from "../../types";
 import { api } from "../../services/api";
 import { ImageUploader } from "./ImageUploader";
+import { AICardScannerModal } from "./AICardScannerModal";
+import { ExtractedCardData } from "../../services/aiCardScanner";
 
 const TikTokIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -102,11 +104,41 @@ export const ProfileManagement: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAiScannerOpen, setIsAiScannerOpen] = useState(false);
   const [editingProf, setEditingProf] = useState<DigitalProfile | null>(null);
   const [activeTab, setActiveTab] = useState<TabId>("identity");
   const [saving, setSaving] = useState(false);
   const [formData, setFormData] = useState<FormData>(defaultForm);
   const set = (patch: Partial<FormData>) => setFormData(prev => ({ ...prev, ...patch }));
+
+  const handleApplyAiData = (data: ExtractedCardData, cardImageUrl?: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      slug: data.slug || prev.slug,
+      ownerName: data.ownerName || prev.ownerName,
+      companyName: data.companyName || prev.companyName,
+      jobTitle: data.jobTitle || prev.jobTitle,
+      bio: data.bio || prev.bio,
+      category: data.category || prev.category,
+      coverUrl: cardImageUrl || prev.coverUrl,
+      theme: data.theme || prev.theme,
+      phone: data.phone || prev.phone,
+      whatsapp: data.whatsapp || prev.whatsapp,
+      email: data.email || prev.email,
+      website: data.website || prev.website,
+      city: data.city || prev.city,
+      address: data.address || prev.address,
+      instagram: data.socials?.instagram || prev.instagram,
+      facebook: data.socials?.facebook || prev.facebook,
+      linkedin: data.socials?.linkedin || prev.linkedin,
+      tiktok: data.socials?.tiktok || prev.tiktok,
+      twitter: data.socials?.twitter || prev.twitter,
+      isActive: true,
+    }));
+    setEditingProf(null);
+    setActiveTab("identity");
+    setIsModalOpen(true);
+  };
 
   const fetchProfiles = async () => {
     try { const res = await api.getAllProfiles(); if(res.success&&res.data) setProfiles(res.data); }
@@ -350,9 +382,23 @@ export const ProfileManagement: React.FC = () => {
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">Profils Digitaux NFC</h2>
           <p className="text-xs text-slate-500 mt-0.5">{profiles.length} profil{profiles.length>1?"s":""} actif{profiles.length>1?"s":""} - Gerez identite, contact, reseaux et design</p>
         </div>
-        <button onClick={openAdd} className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs shadow-md shadow-orange-500/25 transition-all hover:-translate-y-0.5">
-          <Plus className="w-4 h-4"/>Creer un Profil Digital
-        </button>
+        <div className="flex flex-wrap items-center gap-2.5">
+          <button
+            type="button"
+            onClick={() => setIsAiScannerOpen(true)}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-md transition-all hover:-translate-y-0.5 border border-slate-700"
+          >
+            <Sparkles className="w-4 h-4 text-amber-400" />
+            <span>Scanner Carte avec l'IA</span>
+          </button>
+          <button
+            onClick={openAdd}
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs shadow-md shadow-orange-500/25 transition-all hover:-translate-y-0.5"
+          >
+            <Plus className="w-4 h-4" />
+            <span>Créer un Profil Digital</span>
+          </button>
+        </div>
       </div>
 
       <div className="relative max-w-sm">
@@ -443,6 +489,21 @@ export const ProfileManagement: React.FC = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="flex-1 flex flex-col overflow-hidden">
+              {/* Quick AI Fill banner */}
+              <div className="mx-6 mt-3 p-2.5 rounded-2xl bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 border border-orange-200 flex items-center justify-between gap-3 flex-shrink-0">
+                <div className="flex items-center gap-2 text-xs text-orange-950 font-bold">
+                  <Sparkles className="w-4 h-4 text-orange-600 animate-pulse flex-shrink-0" />
+                  <span className="text-[11px] sm:text-xs">Remplir automatiquement depuis une photo de carte de visite</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsAiScannerOpen(true)}
+                  className="px-3 py-1 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-[11px] shadow-xs transition-all whitespace-nowrap"
+                >
+                  Scanner avec l'IA
+                </button>
+              </div>
+
               <div className="flex-1 overflow-y-auto p-6">
                 {activeTab==="identity"&&renderIdentity()}
                 {activeTab==="contact"&&renderContact()}
@@ -469,6 +530,13 @@ export const ProfileManagement: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* AI Card Scanner Modal */}
+      <AICardScannerModal
+        isOpen={isAiScannerOpen}
+        onClose={() => setIsAiScannerOpen(false)}
+        onApplyData={handleApplyAiData}
+      />
     </div>
   );
 };
