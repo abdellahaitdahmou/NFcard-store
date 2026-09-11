@@ -6,7 +6,7 @@ import {
   Image, CheckCircle, X, Save, MapPin, Share2, Palette, User,
   Briefcase
 } from "lucide-react";
-import { DigitalProfile, ProfileTheme } from "../../types";
+import { DigitalProfile, ProfileTheme, ServiceItem } from "../../types";
 import { api } from "../../services/api";
 import { ImageUploader } from "./ImageUploader";
 import { AICardScannerModal } from "./AICardScannerModal";
@@ -56,6 +56,7 @@ interface FormData {
   googleMapsUrl: string; openingHours: string;
   instagram: string; facebook: string; linkedin: string;
   tiktok: string; youtube: string; twitter: string;
+  services: ServiceItem[];
   isActive: boolean;
 }
 
@@ -66,14 +67,16 @@ const defaultForm: FormData = {
   phone:"+212 6 ",whatsapp:"+212 6 ",email:"",
   website:"",city:"Casablanca",address:"",googleMapsUrl:"",openingHours:"",
   instagram:"",facebook:"",linkedin:"",tiktok:"",youtube:"",twitter:"",
+  services:[],
   isActive:true
 };
 
-type TabId = "identity"|"contact"|"social"|"design"|"media";
+type TabId = "identity"|"contact"|"social"|"services"|"design"|"media";
 const TABS: {id:TabId;label:string;icon:React.ReactNode}[] = [
   {id:"identity",label:"Identite",   icon:<User className="w-4 h-4"/>},
   {id:"contact", label:"Contact",    icon:<Phone className="w-4 h-4"/>},
   {id:"social",  label:"Reseaux",    icon:<Share2 className="w-4 h-4"/>},
+  {id:"services",label:"Services",   icon:<Briefcase className="w-4 h-4"/>},
   {id:"design",  label:"Design",     icon:<Palette className="w-4 h-4"/>},
   {id:"media",   label:"Medias",     icon:<Image className="w-4 h-4"/>},
 ];
@@ -133,6 +136,13 @@ export const ProfileManagement: React.FC = () => {
       linkedin: data.socials?.linkedin || prev.linkedin,
       tiktok: data.socials?.tiktok || prev.tiktok,
       twitter: data.socials?.twitter || prev.twitter,
+      youtube: data.socials?.youtube || prev.youtube,
+      services: (data.services || []).map((s, idx) => ({
+        id: `svc-${Date.now()}-${idx}`,
+        title: s.title,
+        description: s.description,
+        price: s.price || ""
+      })),
       isActive: true,
     }));
     setEditingProf(null);
@@ -162,6 +172,7 @@ export const ProfileManagement: React.FC = () => {
       instagram:prof.socials?.instagram||"",facebook:prof.socials?.facebook||"",
       linkedin:prof.socials?.linkedin||"",tiktok:prof.socials?.tiktok||"",
       youtube:prof.socials?.youtube||"",twitter:prof.socials?.twitter||"",
+      services:prof.services||[],
       isActive:prof.isActive
     });
     setActiveTab("identity"); setIsModalOpen(true);
@@ -313,6 +324,101 @@ export const ProfileManagement: React.FC = () => {
           )}
         </div>
       </div>
+    </div>
+  );
+
+
+  const renderServices = () => (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+        <div>
+          <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider">Services & Prestations</h4>
+          <p className="text-[11px] text-slate-400 mt-0.5">Listez vos offres, prestations ou tarifs affichés sur la carte digitale.</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => {
+            const current = formData.services || [];
+            set({
+              services: [
+                ...current,
+                { id: `svc-${Date.now()}`, title: "Nouveau Service", description: "Description de la prestation", price: "" }
+              ]
+            });
+          }}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-orange-700 text-xs font-bold border border-orange-200 transition-colors"
+        >
+          <Plus className="w-3.5 h-3.5" /> Ajouter un Service
+        </button>
+      </div>
+
+      {(formData.services || []).length === 0 ? (
+        <div className="p-8 text-center border-2 border-dashed border-slate-200 rounded-2xl bg-slate-50 text-slate-400 text-xs">
+          <Briefcase className="w-8 h-8 mx-auto text-slate-300 mb-2" />
+          <p>Aucun service configuré pour ce profil.</p>
+          <p className="text-[10px] mt-1 text-slate-400">Utilisez le scanneur IA de carte de visite ou cliquez sur "Ajouter un Service".</p>
+        </div>
+      ) : (
+        <div className="space-y-3 max-h-[380px] overflow-y-auto pr-1">
+          {(formData.services || []).map((svc, idx) => (
+            <div key={svc.id || idx} className="bg-slate-50 border border-slate-200 rounded-2xl p-3.5 space-y-2 relative group hover:border-orange-200 transition-colors">
+              <div className="flex items-center justify-between gap-3">
+                <input
+                  type="text"
+                  value={svc.title}
+                  placeholder="Intitulé du service (ex: Nettoyage à sec, Consultation...)"
+                  onChange={(e) => {
+                    const updated = [...(formData.services || [])];
+                    updated[idx] = { ...updated[idx], title: e.target.value };
+                    set({ services: updated });
+                  }}
+                  className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 focus:outline-none focus:border-orange-400"
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    const updated = (formData.services || []).filter((_, i) => i !== idx);
+                    set({ services: updated });
+                  }}
+                  className="p-2 rounded-xl text-slate-400 hover:text-red-500 hover:bg-red-50 transition-colors flex-shrink-0"
+                  title="Supprimer ce service"
+                >
+                  <Trash2 className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <div className="sm:col-span-2">
+                  <input
+                    type="text"
+                    value={svc.description}
+                    placeholder="Description détaillée de la prestation..."
+                    onChange={(e) => {
+                      const updated = [...(formData.services || [])];
+                      updated[idx] = { ...updated[idx], description: e.target.value };
+                      set({ services: updated });
+                    }}
+                    className="w-full bg-white border border-slate-200 rounded-xl px-3 py-1.5 text-xs text-slate-700 focus:outline-none focus:border-orange-400"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    value={svc.price || ""}
+                    placeholder="Tarif (ex: 50 DH, Devis)"
+                    onChange={(e) => {
+                      const updated = [...(formData.services || [])];
+                      updated[idx] = { ...updated[idx], price: e.target.value };
+                      set({ services: updated });
+                    }}
+                    className="w-full bg-white border border-slate-200 rounded-xl px-3 py-1.5 text-xs font-bold text-orange-600 focus:outline-none focus:border-orange-400"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 
@@ -508,6 +614,7 @@ export const ProfileManagement: React.FC = () => {
                 {activeTab==="identity"&&renderIdentity()}
                 {activeTab==="contact"&&renderContact()}
                 {activeTab==="social"&&renderSocial()}
+                {activeTab==="services"&&renderServices()}
                 {activeTab==="design"&&renderDesign()}
                 {activeTab==="media"&&renderMedia()}
               </div>

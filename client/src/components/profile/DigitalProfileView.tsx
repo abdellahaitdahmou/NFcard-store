@@ -61,6 +61,22 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.55, delay, ease: [0.16, 1, 0.3, 1] },
 });
 
+function safeSocialUrl(type: string, val?: string): string {
+  if (!val || !val.trim()) return "#";
+  const clean = val.trim().replace(/^[;:@|()\[\]\s]+/, "").replace(/[;:@|()\[\]\s]+$/, "");
+  if (clean.startsWith("http://") || clean.startsWith("https://")) return clean;
+  const handle = clean.replace(/\s+/g, "");
+  switch (type) {
+    case "instagram": return `https://instagram.com/${handle.replace(/^@/, "").toLowerCase()}`;
+    case "facebook": return clean.includes(" ") ? `https://www.facebook.com/search/top?q=${encodeURIComponent(clean)}` : `https://facebook.com/${handle.replace(/^@/, "")}`;
+    case "tiktok": return `https://tiktok.com/@${handle.replace(/^@/, "").toLowerCase()}`;
+    case "linkedin": return `https://linkedin.com/in/${handle.replace(/^@/, "")}`;
+    case "twitter": return `https://x.com/${handle.replace(/^@/, "")}`;
+    case "youtube": return `https://youtube.com/@${handle.replace(/^@/, "")}`;
+    default: return clean.startsWith("http") ? clean : `https://${clean}`;
+  }
+}
+
 export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
   const [showShare, setShowShare]   = useState(false);
   const [copied, setCopied]         = useState(false);
@@ -216,7 +232,7 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
             <div className="grid grid-cols-2 gap-2.5">
               {profile.instagram && (
                 <motion.a
-                  href={profile.instagram}
+                  href={safeSocialUrl("instagram", profile.instagram)}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold text-sm shadow-md shadow-pink-500/20"
@@ -228,7 +244,7 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
               )}
               {profile.facebook && (
                 <motion.a
-                  href={profile.facebook}
+                  href={safeSocialUrl("facebook", profile.facebook)}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-[#1877F2] hover:bg-[#1565d8] text-white font-semibold text-sm shadow-md shadow-blue-500/20"
@@ -240,7 +256,7 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
               )}
               {profile.linkedin && (
                 <motion.a
-                  href={profile.linkedin}
+                  href={safeSocialUrl("linkedin", profile.linkedin)}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-[#0A66C2] hover:bg-[#0952a5] text-white font-semibold text-sm shadow-md shadow-blue-500/20"
@@ -252,7 +268,7 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
               )}
               {profile.tiktok && (
                 <motion.a
-                  href={profile.tiktok}
+                  href={safeSocialUrl("tiktok", profile.tiktok)}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-gray-950 hover:bg-gray-800 text-white font-semibold text-sm shadow-md"
@@ -264,7 +280,7 @@ export const DigitalProfileView: React.FC<Props> = ({ profile }) => {
               )}
               {profile.website && (
                 <motion.a
-                  href={profile.website}
+                  href={safeSocialUrl("website", profile.website)}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm shadow-md col-span-2"

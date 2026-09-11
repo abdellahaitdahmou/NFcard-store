@@ -31,3 +31,4 @@ scratch/
 scratch_crops/
 *.pyc
 __pycache__/
+*.traineddata
