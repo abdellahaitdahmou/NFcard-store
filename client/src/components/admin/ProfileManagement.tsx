@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   UserCheck, Plus, Edit, Trash2, Eye, Search, Sparkles,
   Phone, Globe, Mail, Zap, Instagram, Facebook, Linkedin,
@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { DigitalProfile, ProfileTheme } from "../../types";
 import { api } from "../../services/api";
+import { ImageUploader } from "./ImageUploader";
 
 const TikTokIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -312,45 +313,33 @@ export const ProfileManagement: React.FC = () => {
   );
 
   const renderMedia = () => (
-    <div className="space-y-5">
-      <div>
-        <FL>Photo de profil / Avatar (URL)</FL>
-        <div className="flex items-start gap-4">
-          <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-slate-200 bg-slate-100 flex-shrink-0">
-            {formData.avatarUrl?<img src={formData.avatarUrl} alt="avatar" className="w-full h-full object-cover" onError={e=>(e.currentTarget.style.display="none")}/>:<div className="w-full h-full flex items-center justify-center"><Camera className="w-6 h-6 text-slate-400"/></div>}
-          </div>
-          <div className="flex-1">
-            <input type="text" className={inp} value={formData.avatarUrl} onChange={e=>set({avatarUrl:e.target.value})} placeholder="https://... (lien direct vers l'image)"/>
-            <p className="text-[10px] text-slate-400 mt-1.5">Photo carree 400x400px minimum. JPG ou PNG.</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <FL>Logo de l'entreprise (URL)</FL>
-        <div className="flex items-start gap-4">
-          <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-slate-200 bg-slate-50 flex-shrink-0 p-2">
-            {formData.logoUrl?<img src={formData.logoUrl} alt="logo" className="w-full h-full object-contain" onError={e=>(e.currentTarget.style.display="none")}/>:<div className="w-full h-full flex items-center justify-center"><Building2 className="w-6 h-6 text-slate-400"/></div>}
-          </div>
-          <div className="flex-1">
-            <input type="text" className={inp} value={formData.logoUrl} onChange={e=>set({logoUrl:e.target.value})} placeholder="https://... (PNG transparent recommande)"/>
-            <p className="text-[10px] text-slate-400 mt-1.5">Apparait en haut a droite de la carte. PNG transparent recommande.</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <FL>Photo de couverture / Banniere (URL)</FL>
-        <div className="space-y-2">
-          <div className="w-full h-24 rounded-2xl overflow-hidden border-2 border-slate-200 bg-slate-100 relative">
-            {formData.coverUrl?<img src={formData.coverUrl} alt="cover" className="w-full h-full object-cover" onError={e=>(e.currentTarget.style.display="none")}/>
-              :<div className={`w-full h-full bg-gradient-to-br ${selectedTheme.preview} flex items-center justify-center`}><span className="text-white/60 text-xs">Apercu du theme sans banniere</span></div>}
-          </div>
-          <input type="text" className={inp} value={formData.coverUrl} onChange={e=>set({coverUrl:e.target.value})} placeholder="https://... (1600x400px recommande)"/>
-          <p className="text-[10px] text-slate-400">Si vide, le theme visuel sera utilise. Format recommande: 1600x400px JPG.</p>
-        </div>
-      </div>
-      <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-[11px] text-amber-700">
-        <strong>Heberger vos images gratuitement:</strong> ImgBB.com, Postimages, ou Google Drive (lien partage public). Le lien doit pointer directement vers l'image.
-      </div>
+    <div className="space-y-4">
+      <ImageUploader
+        label="Photo de profil / Avatar"
+        value={formData.avatarUrl}
+        onChange={(url) => set({ avatarUrl: url })}
+        type="avatar"
+        recommendedSize="400 × 400 px"
+        hint="Photo portrait professionnelle, nette et bien cadrée. Apparaît au centre du profil NFC."
+      />
+
+      <ImageUploader
+        label="Logo de l'entreprise"
+        value={formData.logoUrl}
+        onChange={(url) => set({ logoUrl: url })}
+        type="logo"
+        recommendedSize="PNG transparent"
+        hint="Logo officiel de votre entreprise ou marque. Apparaît en badge à côté de la photo."
+      />
+
+      <ImageUploader
+        label="Photo de couverture / Bannière"
+        value={formData.coverUrl}
+        onChange={(url) => set({ coverUrl: url })}
+        type="cover"
+        recommendedSize="1200 × 400 px"
+        hint="Bannière d'en-tête du profil. Si vide, le dégradé du thème sélectionné sera affiché."
+      />
     </div>
   );
 
