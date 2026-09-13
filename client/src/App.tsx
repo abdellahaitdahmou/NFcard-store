@@ -27,13 +27,16 @@ import { TermsAndConditions } from "./pages/TermsAndConditions";
 import { AdminLogin } from "./pages/AdminLogin";
 import { AdminDashboard } from "./pages/AdminDashboard";
 import { PortfolioExemple } from "./pages/PortfolioExemple";
+import { RestaurantMenuDemo } from "./pages/RestaurantMenuDemo";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
   const isSpecial =
     location.pathname.startsWith("/p/") ||
     location.pathname.startsWith("/card/") ||
-    location.pathname.startsWith("/admin");
+    location.pathname.startsWith("/admin") ||
+    location.pathname.startsWith("/menu-exemple") ||
+    location.pathname.startsWith("/menu-demo");
 
   if (isSpecial) {
     return <>{children}</>;
@@ -77,6 +80,8 @@ export function App() {
                 <Route path="/p/:slug" element={<ProfilePage />} />
                 <Route path="/card/:cardSlug" element={<CardRedirectPage />} />
                 <Route path="/portfolio-exemple" element={<PortfolioExemple />} />
+                <Route path="/menu-exemple" element={<RestaurantMenuDemo />} />
+                <Route path="/menu-demo" element={<RestaurantMenuDemo />} />
 
                 {/* Admin */}
                 <Route path="/admin/login" element={<AdminLogin />} />

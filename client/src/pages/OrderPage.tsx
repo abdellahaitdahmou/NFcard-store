@@ -122,6 +122,14 @@ export const OrderPage: React.FC = () => {
     };
 
     fetchData();
+
+    const handleFocus = () => fetchData();
+    window.addEventListener("focus", handleFocus);
+    document.addEventListener("visibilitychange", handleFocus);
+    return () => {
+      window.removeEventListener("focus", handleFocus);
+      document.removeEventListener("visibilitychange", handleFocus);
+    };
   }, [searchParams]);
 
   const currentItem = selectedType === "product"
@@ -383,6 +391,19 @@ export const OrderPage: React.FC = () => {
                             {currentItem.comparePrice} DH
                           </span>
                         )}
+                        {"stockQuantity" in currentItem && typeof (currentItem as any).stockQuantity === "number" && (
+                          <span className={`ml-2 text-[10px] font-bold ${
+                            (currentItem as any).stockQuantity <= 0
+                              ? "text-rose-600"
+                              : (currentItem as any).stockQuantity <= 5
+                              ? "text-amber-600 font-extrabold"
+                              : "text-emerald-600"
+                          }`}>
+                            {(currentItem as any).stockQuantity <= 0
+                              ? "• Rupture de stock"
+                              : `• ${(currentItem as any).stockQuantity} en stock`}
+                          </span>
+                        )}
                       </p>
                     </div>
 
@@ -400,7 +421,12 @@ export const OrderPage: React.FC = () => {
                       </span>
                       <button
                         type="button"
-                        onClick={() => setQuantity(quantity + 1)}
+                        onClick={() => {
+                          const maxStock = "stockQuantity" in currentItem && typeof (currentItem as any).stockQuantity === "number"
+                            ? Math.max(1, (currentItem as any).stockQuantity)
+                            : 999;
+                          setQuantity(Math.min(maxStock, quantity + 1));
+                        }}
                         className="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-600 hover:bg-slate-100 rounded-lg"
                       >
                         +

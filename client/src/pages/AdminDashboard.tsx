@@ -8,6 +8,7 @@ import { OrderManagement } from "../components/admin/OrderManagement";
 import { CardManagement } from "../components/admin/CardManagement";
 import { ProfileManagement } from "../components/admin/ProfileManagement";
 import { DynamicPricing } from "../components/admin/DynamicPricing";
+import { StockManagement } from "../components/admin/StockManagement";
 import { PackagesManagement } from "../components/admin/PackagesManagement";
 import { CompetitorResearch } from "../components/admin/CompetitorResearch";
 import { MessagesAdmin } from "../components/admin/MessagesAdmin";
@@ -74,6 +75,10 @@ export const AdminDashboard: React.FC = () => {
 
       {activeTab === "profiles" && (
         <ProfileManagement />
+      )}
+
+      {activeTab === "stock" && (
+        <StockManagement />
       )}
 
       {activeTab === "pricing" && (

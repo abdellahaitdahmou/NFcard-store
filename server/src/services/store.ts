@@ -363,6 +363,14 @@ export class DataStore {
       ]
     };
 
+    // 7. Decrement product stock if applicable
+    if (orderData.productType === "product" && orderData.productId) {
+      const prod = this.data.products.find((p) => p.id === orderData.productId || p.slug === orderData.productId);
+      if (prod && typeof prod.stockQuantity === "number") {
+        prod.stockQuantity = Math.max(0, prod.stockQuantity - (orderData.quantity || 1));
+      }
+    }
+
     this.data.orders.unshift(newOrder);
     this.saveData();
     return newOrder;

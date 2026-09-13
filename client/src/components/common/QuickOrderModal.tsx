@@ -239,6 +239,11 @@ export const QuickOrderModal: React.FC<QuickOrderModalProps> = ({
                   </h4>
                   <p className="text-[11px] text-amber-700 font-semibold">
                     {item.price} DH / unité
+                    {"stockQuantity" in item && typeof (item as any).stockQuantity === "number" && (
+                      <span className="ml-2 text-[10px] font-bold text-slate-500">
+                        • Stock: {(item as any).stockQuantity}
+                      </span>
+                    )}
                   </p>
                 </div>
                 {/* Quantity */}
@@ -255,7 +260,12 @@ export const QuickOrderModal: React.FC<QuickOrderModalProps> = ({
                   </span>
                   <button
                     type="button"
-                    onClick={() => setQuantity(quantity + 1)}
+                    onClick={() => {
+                      const maxStock = "stockQuantity" in item && typeof (item as any).stockQuantity === "number"
+                        ? Math.max(1, (item as any).stockQuantity)
+                        : 999;
+                      setQuantity(Math.min(maxStock, quantity + 1));
+                    }}
                     className="w-6 h-6 flex items-center justify-center text-xs font-bold text-slate-600 hover:bg-slate-100 rounded"
                   >
                     +

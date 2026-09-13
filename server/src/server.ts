@@ -56,8 +56,13 @@ app.get("/api/health", (req, res) => {
 
 // Card direct tap redirection helper (for physical NFC tags pointing directly to /card/xyz)
 app.get("/card/:slug", (req, res) => {
-  const card = store.getCardBySlug(req.params.slug);
   const clientBaseUrl = process.env.SITE_URL || "";
+
+  if (req.params.slug === "menu-demo" || req.params.slug === "restaurant" || req.params.slug === "menu") {
+    return res.redirect(`${clientBaseUrl}/menu-exemple`);
+  }
+
+  const card = store.getCardBySlug(req.params.slug);
 
   if (card && card.status === "active") {
     store.incrementCardTap(card.cardSlug);

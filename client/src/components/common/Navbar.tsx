@@ -9,6 +9,7 @@ const navLinks = [
   { to: '/packs',             label: 'Packs & Tarifs' },
   { to: '/templates',         label: 'Modèles' },
   { to: '/solutions',         label: 'Solutions' },
+  { to: '/menu-exemple',      label: '🍽️ Menu Restaurant' },
   { to: '/comment-ca-marche', label: 'Comment ça marche' },
 ];
 

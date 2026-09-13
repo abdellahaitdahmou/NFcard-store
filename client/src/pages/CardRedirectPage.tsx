@@ -11,6 +11,10 @@ export const CardRedirectPage: React.FC = () => {
   useEffect(() => {
     const resolve = async () => {
       if (!cardSlug) return;
+      if (cardSlug === "menu-demo" || cardSlug === "menu" || cardSlug === "restaurant") {
+        navigate("/menu-exemple", { replace: true });
+        return;
+      }
       try {
         const res = await api.resolveCard(cardSlug);
         if (res.success && res.data && res.data.targetProfileSlug) {

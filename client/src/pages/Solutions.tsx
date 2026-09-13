@@ -54,7 +54,7 @@ export const Solutions: React.FC = () => {
         "Lien direct vers vos avis Google Maps 5 étoiles",
         "Chevalet de table NFC / QR code offert"
       ],
-      link: "/portfolio-exemple",
+      link: "/menu-exemple",
       orderLink: "/commander?pack=restaurant-cafe"
     },
     {

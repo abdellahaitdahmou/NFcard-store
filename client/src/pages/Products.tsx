@@ -26,7 +26,7 @@ export const Products: React.FC = () => {
   const [quickOrderItem, setQuickOrderItem] = useState<Product | null>(null);
   const { openWhatsAppChat } = useSettings();
 
-  useEffect(() => {
+  const loadProducts = () => {
     api.getProducts()
       .then((res) => {
         if (res.success && res.data) {
@@ -35,6 +35,17 @@ export const Products: React.FC = () => {
       })
       .catch((err) => console.error("Error fetching products:", err))
       .finally(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    loadProducts();
+    const handleFocus = () => loadProducts();
+    window.addEventListener("focus", handleFocus);
+    document.addEventListener("visibilitychange", handleFocus);
+    return () => {
+      window.removeEventListener("focus", handleFocus);
+      document.removeEventListener("visibilitychange", handleFocus);
+    };
   }, []);
 
   const categories = [
@@ -132,15 +143,38 @@ export const Products: React.FC = () => {
                       <p className="text-xs text-slate-500 leading-relaxed">{prod.description}</p>
                     </div>
 
-                    {/* Price Box */}
-                    <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-100 flex items-baseline justify-between">
-                      <span className="text-xs text-slate-500 font-medium">Tarif</span>
-                      <div>
-                        <span className="text-2xl sm:text-3xl font-black text-slate-900">{prod.price}</span>
-                        <span className="text-sm font-bold text-orange-500 ml-1">DH</span>
-                        {prod.comparePrice && (
-                          <span className="text-xs text-slate-400 line-through ml-2">
-                            {prod.comparePrice} DH
+                    {/* Price & Stock Box */}
+                    <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-100 space-y-2">
+                      <div className="flex items-baseline justify-between">
+                        <span className="text-xs text-slate-500 font-medium">Tarif</span>
+                        <div>
+                          <span className="text-2xl sm:text-3xl font-black text-slate-900">{prod.price}</span>
+                          <span className="text-sm font-bold text-orange-500 ml-1">DH</span>
+                          {prod.comparePrice && (
+                            <span className="text-xs text-slate-400 line-through ml-2">
+                              {prod.comparePrice} DH
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Live Stock Indicator */}
+                      <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs">
+                        <span className="text-[11px] font-medium text-slate-500">Disponibilité :</span>
+                        {prod.stockQuantity !== undefined && prod.stockQuantity <= 0 ? (
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-50 text-rose-700 border border-rose-200">
+                            <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            Rupture de Stock
+                          </span>
+                        ) : prod.stockQuantity !== undefined && prod.stockQuantity <= (prod.minStockAlert || 5) ? (
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-amber-50 text-amber-800 border border-amber-200 animate-pulse">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            🔥 Plus que {prod.stockQuantity} en stock !
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            En Stock ({prod.stockQuantity ?? "Disponible"})
                           </span>
                         )}
                       </div>
@@ -160,18 +194,29 @@ export const Products: React.FC = () => {
 
                 {/* Actions */}
                 <div className="p-5 sm:p-6 pt-0 space-y-2 border-t border-slate-100">
-                  <button
-                    type="button"
-                    onClick={() => setQuickOrderItem(prod)}
-                    className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-black text-xs shadow-md transition-all active:scale-98 ${
-                      prod.isPopular
-                        ? "bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-orange-500/25"
-                        : "bg-slate-900 hover:bg-slate-800 text-white"
-                    }`}
-                  >
-                    <ShoppingBag className="w-4 h-4" />
-                    <span>Commander en 1 Clic ({prod.price} DH)</span>
-                  </button>
+                  {prod.stockQuantity !== undefined && prod.stockQuantity <= 0 ? (
+                    <button
+                      type="button"
+                      onClick={() => openWhatsAppChat(`Bonjour, je souhaite être informé du réassort de : ${prod.name}.`)}
+                      className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all"
+                    >
+                      <MessageCircle className="w-4 h-4 text-amber-600" />
+                      <span>Rupture — Précommander sur WhatsApp</span>
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setQuickOrderItem(prod)}
+                      className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-black text-xs shadow-md transition-all active:scale-98 ${
+                        prod.isPopular
+                          ? "bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-orange-500/25"
+                          : "bg-slate-900 hover:bg-slate-800 text-white"
+                      }`}
+                    >
+                      <ShoppingBag className="w-4 h-4" />
+                      <span>Commander en 1 Clic ({prod.price} DH)</span>
+                    </button>
+                  )}
 
                   <button
                     onClick={() => openWhatsAppChat(`Bonjour, je souhaite commander : ${prod.name} (Prix : ${prod.price} DH).`)}

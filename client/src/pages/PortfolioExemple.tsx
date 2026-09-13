@@ -359,6 +359,15 @@ export const PortfolioExemple: React.FC = () => {
                     <p className="text-gray-500 text-sm leading-relaxed">
                       Voici ce que vos clients verront après avoir tapé votre carte NFC. Tout est personnalisé avec vos vraies informations, logo, services et photos.
                     </p>
+                    {active.id === "resto" && (
+                      <Link
+                        to="/menu-exemple"
+                        className="mt-3 w-full py-3 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-2 shadow-md shadow-orange-500/20 hover:scale-[1.02] transition-all"
+                      >
+                        <Utensils className="w-4 h-4" />
+                        <span>Ouvrir l'Expérience Menu Restaurant Complète →</span>
+                      </Link>
+                    )}
                   </motion.div>
                 </AnimatePresence>
 

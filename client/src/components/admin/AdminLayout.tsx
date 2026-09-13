@@ -16,7 +16,8 @@ import {
   Zap,
   ChevronRight,
   Sparkles,
-  ShieldCheck
+  ShieldCheck,
+  Boxes
 } from "lucide-react";
 
 interface AdminLayoutProps {
@@ -50,6 +51,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
     {
       title: "Catalogue & Puces",
       items: [
+        { id: "stock", label: "Gestion de Stock", icon: Boxes, badge: "Nouveau" },
         { id: "pricing", label: "Produits & Tarifs", icon: Tag },
         { id: "packages", label: "Packs Métiers", icon: Briefcase },
         { id: "cards", label: "Inventaire Cartes NFC", icon: CreditCard },

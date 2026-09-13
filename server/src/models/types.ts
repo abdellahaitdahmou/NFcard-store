@@ -28,8 +28,12 @@ export interface Product {
   slug: string;
   tagline: string;
   description: string;
-  price: number; // in DH
+  price: number; // in DH (prix de vente)
+  costPrice?: number; // in DH (prix d'achat / coût de revient)
   comparePrice?: number;
+  stockQuantity: number; // nombre de produits en stock
+  minStockAlert?: number; // seuil d'alerte stock bas
+  sku?: string; // code référence article
   features: string[];
   isPopular?: boolean;
   category: "cards" | "stands" | "accessories" | "rfid" | "basic" | "business" | "premium" | "custom";

@@ -69,6 +69,15 @@ export const api = {
     return res.json();
   },
 
+  async adjustProductStock(id: string, options: { quantity?: number; delta?: number }) {
+    const res = await fetch(`${API_BASE}/products/${id}/stock`, {
+      method: "PATCH",
+      headers: getAuthHeaders(),
+      body: JSON.stringify(options)
+    });
+    return res.json();
+  },
+
   async createProduct(product: Partial<Product>) {
     const res = await fetch(`${API_BASE}/products`, {
       method: "POST",
